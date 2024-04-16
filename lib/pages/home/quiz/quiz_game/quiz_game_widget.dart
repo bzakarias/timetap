@@ -164,7 +164,7 @@ class QuizGameWidget extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(20, 20, 20, 50),
                       child: Row(
                         children: [
-                          SizedBox(width: Get.width * .66),
+                          SizedBox(width: Get.width * .5),
                           Expanded(
                             child: InkWell(
                                 child: Container(

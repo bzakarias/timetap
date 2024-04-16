@@ -75,25 +75,7 @@ class HomeView extends StatelessWidget {
           body: Stack(
             children: [
               getContent(currentPage: controller.currentPage),
-              Positioned(
-                top: 0,
-                child: Container(
-                  height: 20,
-                  width: Get.width,
-                  decoration: BoxDecoration(
-                    color: color4,
-                    gradient: LinearGradient(
-                      colors: [
-                        color4.withOpacity(1),
-                        color4.withOpacity(0),
-                      ],
-                      stops: const [0.15, 1],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                    ),
-                  ),
-                ),
-              ),
+
               Positioned(
                 bottom: 0,
                 left: 0,
