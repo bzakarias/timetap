@@ -11,44 +11,44 @@ class StartPageController extends GetxController {
 
   List<EntertainmentContent> entertainmentContents = [
     EntertainmentContent(
-        title: "Ryan közlegény megmentése",
+        title: "Küldetés a frontvonalon",
         description: "Egy amerikai katona megmentésére indított küldetés második világháborús Európában.",
-        image: "images/saving_private_ryan.webp",
+        image: "images/mission_on_the_frontline.webp",
         rating: 8.6,
         year: 1998
     ),
     EntertainmentContent(
-        title: "Hearts of Iron IV",
+        title: "Iron Crown Strategies IV",
         description: "Stratégiai játék, amely a második világháború idején játszódik.",
-        image: "images/hoi4.webp",
+        image: "images/ics_iv.webp",
         rating: 9.0,
         year: 2016
     ),
     EntertainmentContent(
-        title: "Ellenség a kapuknál",
+        title: "Ostromlott város",
         description: "Orosz lövész és német ellensége közötti csata Sztálingrádban a második világháború alatt.",
-        image: "images/enemy_at_the_gates.webp",
+        image: "images/besieged_city.webp",
         rating: 7.6,
         year: 2001
     ),
     EntertainmentContent(
-        title: "Mi, németek",
+        title: "Wir Deutschen",
         description: "Egy történelmi könyv Németország második világháborús éveiről.",
         image: "images/wir_deutschen.webp",
         rating: 8.0,
         year: 2019
     ),
     EntertainmentContent(
-        title: "Battlefield V",
+        title: "Frontline V",
         description: "Többjátékos akciójáték, amely a második világháború különböző frontjain játszódik.",
-        image: "images/battlefield_v.webp",
+        image: "images/frontline_v.webp",
         rating: 7.5,
         year: 2018
     ),
     EntertainmentContent(
-        title: "Call of Duty 2",
+        title: "Field of Honor 2",
         description: "FPS, amely a második világháborúban játszódik.",
-        image: "images/call_of_duty_2.webp",
+        image: "images/field_of_honor_2.webp",
         rating: 9.0,
         year: 2005
     )
