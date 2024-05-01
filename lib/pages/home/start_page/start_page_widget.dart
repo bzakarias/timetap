@@ -371,7 +371,7 @@ class StartPageWidget extends StatelessWidget {
                           height: 100,
                           child: Center(
                             child: controller.answered ? (
-                                controller.yearController.text == controller.correctYear.toString()) ? Text('Gratulalok!') : Text('Sajnos, nem. A helyes valasz ${controller.correctYear}') : Padding(
+                                controller.yearController.text == controller.correctYear.toString()) ? Text('Gratulalok!') : Text('Sajnos nem. A helyes válasz ${controller.correctYear}') : Padding(
                               padding: EdgeInsets.fromLTRB(Get.width * .2 , 10, Get.width * .2, 10),
                               child: Row(
                                 children: [

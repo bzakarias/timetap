@@ -25,9 +25,13 @@ class QuizWidget extends StatelessWidget {
             itemBuilder: (context, index){
               Topic topic = controller.topics[index];
               return InkWell(
-                onTap: (){
-                  Get.toNamed(Routes.QUIZ_GAME);
-                },
+                onTap: topic.questions != null ? (){
+                  if(topic.questions!.isNotEmpty){}
+                  Get.toNamed(
+                    Routes.QUIZ_GAME,
+                    arguments: topic,
+                  );
+                } : null,
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,

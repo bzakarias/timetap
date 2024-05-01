@@ -1,3 +1,4 @@
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:timetap/pages/test_graduation/test_graduation_controller.dart';
@@ -301,7 +302,7 @@ class TestGraduationView extends StatelessWidget {
                                       ),
                                   ),
                                   TextSpan(
-                                      text: ' Levediák, Vereckei hágó, törzsszövetség, 7 magyar törzs',
+                                      text: ' Levédia, Vereckei-hágó, nomád életmód, vérszerződés, 7 magyar törzs',
                                       style: TextStyle(
                                         color: Colors.black,
                                         fontFamily: 'TinosItalic',
@@ -314,12 +315,263 @@ class TestGraduationView extends StatelessWidget {
                       ],
                     ),
                   ),
+
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    child: Table(
+                      border: TableBorder.all(
+                        color: Colors.black,
+                        width: 1,
+                      ),
+                      children: [
+                        const TableRow(
+                          children: [
+                            Text(
+                              'Szövegrészlet',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'TinosBold',
+                              ),
+                            ),
+                            Text(
+                              'Fogalom',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'TinosBold',
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        TableRow(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: RichText(
+                                text: const TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'a) ',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'TinosBold',
+                                      ),
+                                    ),
+
+                                    TextSpan(
+                                      text: '„A Kárpát-medence felé vezető út egy szűk hágón át haladt, amely később legendás jelentőségű lett.”',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'TinosRegular',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+
+                            getDropdown(
+                              controller: controller,
+                              controllerValue: controller.answerA,
+                            ),
+                          ],
+                        ),
+
+                        TableRow(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: RichText(
+                                text: const TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'b) ',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'TinosBold',
+                                      ),
+                                    ),
+
+                                    TextSpan(
+                                      text: '„A törzsfők közötti megállapodás, amely biztosította az együttműködést és a közös cél érdekében történő cselekvést.”',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'TinosRegular',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+
+                            getDropdown(
+                              controller: controller,
+                              controllerValue: controller.answerB,
+                            ),
+                          ],
+                        ),
+
+                        TableRow(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: RichText(
+                                text: const TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'c) ',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'TinosBold',
+                                      ),
+                                    ),
+
+                                    TextSpan(
+                                      text: '„A Kárpát-medencétől keletre fekvő terület, ahol a népcsoport először telepedett le, mielőtt tovább vonult volna nyugatra.”',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'TinosRegular',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+
+                            getDropdown(
+                              controller: controller,
+                              controllerValue: controller.answerC,
+                            ),
+                          ],
+                        ),
+
+                        TableRow(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: RichText(
+                                text: const TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'd) ',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'TinosBold',
+                                      ),
+                                    ),
+
+                                    TextSpan(
+                                      text: '„A honfoglalók a Kárpát-medencében törzsekben rendezkedtek be, melyek számát hagyományosan hétnek tartják.”',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'TinosRegular',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+
+                            getDropdown(
+                              controller: controller,
+                              controllerValue: controller.answerD,
+                            ),
+
+
+                          ],
+                        ),
+
+                      ],
+                    ),
+                  ),
                 ],
               ),
             )
           ),
         );
       }
+    );
+  }
+
+  Widget getDropdown({
+    required TestGraduationController controller,
+    required String? controllerValue,
+  }){
+    return Container(
+      child: Center(
+        child: DropdownButton2(
+          underline: Container(),
+          value: controllerValue,
+          items: const [
+            DropdownMenuItem(
+              value: 'Levédia',
+              child: Text(
+                'Levédia',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'TinosRegular',
+                ),
+              ),
+            ),
+            DropdownMenuItem(
+              value: 'Levédia',
+              child: Text(
+                'nomád életmód',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'TinosRegular',
+                ),
+              ),
+            ),
+            DropdownMenuItem(
+              value: 'Vereckei-hágó',
+              child: Text(
+                'Vereckei-hágó',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'TinosRegular',
+                ),
+              ),
+            ),
+            DropdownMenuItem(
+              value: 'vérszerződés',
+              child: Text(
+                'vérszerződés',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'TinosRegular',
+                ),
+              ),
+            ),
+            DropdownMenuItem(
+              value: '7 magyar törzs',
+              child: Text(
+                '7 magyar törzs',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'TinosRegular',
+                ),
+              ),
+            ),
+          ],
+          dropdownStyleData: DropdownStyleData(
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              color: Colors.white.withOpacity(0.85),
+            ),
+          ),
+          onChanged: (String ?value){
+            if(value != null){
+              controllerValue = value;
+              controller.update();
+            }
+          },
+        ),
+      ),
     );
   }
 }

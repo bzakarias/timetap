@@ -155,7 +155,7 @@ class ProfileWidget extends StatelessWidget {
                           ),
                           const SizedBox(width: 10),
                           Text(
-                            '11/B',
+                            '12/B',
                             style: TextStyle(
                               fontSize: 12,
                               color: color1.withOpacity(.5),

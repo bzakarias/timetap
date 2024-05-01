@@ -14,8 +14,8 @@ class QuizGameWidget extends StatelessWidget {
     return GetBuilder<QuizGameController>(
       init: QuizGameController(),
       builder: (controller){
-        final QuizController quizController = Get.find<QuizController>();
-        final List<Question> questions = quizController.topics.first.questions!;
+        Topic? topic = Get.arguments as Topic;
+        final List<Question> questions = topic.questions!;
         final Question question = questions[controller.questionIndex];
         return Scaffold(
           body: Stack(

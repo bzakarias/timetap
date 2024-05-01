@@ -277,72 +277,120 @@ class QuizController extends GetxController {
       id: 2,
       title: 'A Római Birodalom',
       imgPath: 'images/topic002.webp',
+      questions: [
+        Question(
+          id: 1,
+          questionText: 'Ki volt Róma első császára?',
+          imgPath: 'images/question_roma_001.webp',
+          answers: [
+            Answer(id: 1, answerText: 'Julius Caesar', correct: false),
+            Answer(id: 2, answerText: 'Nero', correct: false),
+            Answer(id: 3, answerText: 'Augustus', correct: true),
+            Answer(id: 4, answerText: 'Tiberius', correct: false),
+          ],
+        ),
+        Question(
+          id: 2,
+          questionText: 'Mikor volt a Római Birodalom bukása?',
+          imgPath: 'images/question_roma_002.webp',
+          answers: [
+            Answer(id: 1, answerText: '44 Kr.e.', correct: false),
+            Answer(id: 2, answerText: '27 Kr.e.', correct: false),
+            Answer(id: 3, answerText: '1453', correct: false),
+            Answer(id: 4, answerText: '476', correct: true),
+          ],
+        ),
+        Question(
+          id: 3,
+          questionText: 'Mi volt a fő célja a Pax Romana politikának?',
+          imgPath: 'images/question_roma_003.webp',
+          answers: [
+            Answer(id: 1, answerText: 'A birodalom belső zavargásainak csökkentése', correct: false),
+            Answer(id: 2, answerText: 'Kiterjedt béke és stabilitás biztosítása a birodalomban', correct: true),
+            Answer(id: 3, answerText: 'Katonai expanzió folytatása', correct: false),
+            Answer(id: 4, answerText: 'Gazdasági válság kezelése', correct: false),
+          ],
+        ),
+        Question(
+          id: 4,
+          questionText: 'Melyik csata jelentette a Római Birodalom egyik legnagyobb vereségét?',
+          imgPath: 'images/question_roma_004.webp',
+          answers: [
+            Answer(id: 1, answerText: 'Cannaei csata', correct: true),
+            Answer(id: 2, answerText: 'Actiumi csata', correct: false),
+            Answer(id: 3, answerText: 'Zamai csata', correct: false),
+            Answer(id: 4, answerText: 'Milviusi-hídi csata', correct: false),
+          ],
+        ),
+        Question(
+          id: 5,
+          questionText: 'Melyik építmény volt elsősorban gladiátorviadalok helyszíne?',
+          imgPath: 'images/question_roma_005.webp',
+          answers: [
+            Answer(id: 1, answerText: 'Pantheon', correct: false),
+            Answer(id: 2, answerText: 'Colosseum', correct: true),
+            Answer(id: 3, answerText: 'Forum Romanum', correct: false),
+            Answer(id: 4, answerText: 'Circus Maximus', correct: false),
+          ],
+        ),
+        Question(
+          id: 6,
+          questionText: 'Ki volt Róma utolsó császára Nyugaton?',
+          imgPath: 'images/question_roma_006.webp',
+          answers: [
+            Answer(id: 1, answerText: 'Julianus', correct: false),
+            Answer(id: 2, answerText: 'Constantinus', correct: false),
+            Answer(id: 3, answerText: 'Romulus Augustulus', correct: true),
+            Answer(id: 4, answerText: 'Theodosius', correct: false),
+          ],
+        ),
+        Question(
+          id: 7,
+          questionText: 'Melyik törvényi kódex fektette le a római jog alapjait?',
+          imgPath: 'images/question_roma_007.webp',
+          answers: [
+            Answer(id: 1, answerText: 'Hammurábi törvényei', correct: false),
+            Answer(id: 2, answerText: 'A Tizenkéttáblás törvények', correct: true),
+            Answer(id: 3, answerText: 'Justinianus törvénykönyve', correct: false),
+            Answer(id: 4, answerText: 'Napóleon törvénykönyve', correct: false),
+          ],
+        ),
+        Question(
+          id: 8,
+          questionText: 'Melyik császár időszakában érte el területileg a Római Birodalom a legnagyobb kiterjedését?',
+          imgPath: 'images/question_roma_008.webp',
+          answers: [
+            Answer(id: 1, answerText: 'Claudius', correct: false),
+            Answer(id: 2, answerText: 'Traianus', correct: true),
+            Answer(id: 3, answerText: 'Hadrianus', correct: false),
+            Answer(id: 4, answerText: 'Nero', correct: false),
+          ],
+        ),
+        Question(
+          id: 9,
+          questionText: 'Kinek a nevével vált ismertté a híres rabszolga felkelés?',
+          imgPath: 'images/question_roma_009.webp',
+          answers: [
+            Answer(id: 1, answerText: 'Vercingetorix', correct: false),
+            Answer(id: 2, answerText: 'Boudicca', correct: false),
+            Answer(id: 3, answerText: 'Spartacus', correct: true),
+            Answer(id: 4, answerText: 'Arminius', correct: false),
+          ],
+        ),
+        Question(
+          id: 10,
+          questionText: 'Melyik esemény jelölte a Római Köztársaság végét, és egyben a Római Birodalom kezdetét?',
+          imgPath: 'images/question_roma_001.webp',
+          answers: [
+            Answer(id: 1, answerText: 'Caesar meggyilkolása', correct: true),
+            Answer(id: 2, answerText: 'Augustus hatalomra kerülése', correct: false),
+            Answer(id: 3, answerText: 'Spartacus felkelése', correct: false),
+            Answer(id: 4, answerText: 'A második pun háború vége', correct: false),
+          ],
+        ),
+      ],
     ),
-    Topic(
-      id: 3,
-      title: '48-as forradalom',
-      imgPath: 'images/topic003.webp',
-    ),
-    Topic(
-      id: 4,
-      title: 'Az ipari forradalom',
-      imgPath: 'images/topic004.webp',
 
-    ),
-    Topic(
-      id: 5,
-      title: 'A Nagy Háború',
-      imgPath: 'images/topic005.webp',
-    ),
-
-    // TODO: Remove
-    Topic(
-      id: 2,
-      title: 'A Római Birodalom',
-      imgPath: 'images/topic002.webp',
-    ),
-    Topic(
-      id: 3,
-      title: '48-as forradalom',
-      imgPath: 'images/topic003.webp',
-    ),
-    Topic(
-      id: 4,
-      title: 'Az ipari forradalom',
-      imgPath: 'images/topic004.webp',
-
-    ),
-    Topic(
-      id: 5,
-      title: 'A Nagy Háború',
-      imgPath: 'images/topic005.webp',
-    ),
-    Topic(
-      id: 2,
-      title: 'A Római Birodalom',
-      imgPath: 'images/topic002.webp',
-    ),
-    Topic(
-      id: 3,
-      title: '48-as forradalom',
-      imgPath: 'images/topic003.webp',
-    ),
-    Topic(
-      id: 4,
-      title: 'Az ipari forradalom',
-      imgPath: 'images/topic004.webp',
-
-    ),
-    Topic(
-      id: 5,
-      title: 'A Nagy Háború',
-      imgPath: 'images/topic005.webp',
-    ),
-    Topic(
-      id: 2,
-      title: 'A Római Birodalom',
-      imgPath: 'images/topic002.webp',
-    ),
     Topic(
       id: 3,
       title: '48-as forradalom',
