@@ -76,6 +76,18 @@ flutter:
       fonts:
         - asset: fonts/OpenSans-SemiBold.ttf
 
+    - family: TinosRegular
+      fonts:
+        - asset: fonts/Tinos-Regular.ttf
+
+    - family: TinosBold
+      fonts:
+        - asset: fonts/Tinos-Bold.ttf
+
+    - family: TinosItalic
+      fonts:
+        - asset: fonts/Tinos-Italic.ttf
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

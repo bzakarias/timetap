@@ -4,6 +4,8 @@ import 'package:timetap/core/routes.dart';
 import 'package:timetap/pages/home/home_view.dart';
 import 'package:timetap/pages/home/quiz/quiz_game/quiz_game_widget.dart';
 
+import 'pages/test_graduation/test_graduation_view.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +29,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: Routes.QUIZ_GAME,
           page: () => QuizGameWidget(),
+        ),
+        GetPage(
+          name: Routes.TEST_GRADUATION,
+          page: () => const TestGraduationView(),
         ),
       ],
     );
