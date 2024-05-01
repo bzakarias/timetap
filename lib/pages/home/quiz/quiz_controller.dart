@@ -3,13 +3,14 @@ import 'package:timetap/models/quiz.dart';
 
 class QuizController extends GetxController {
   List<Topic> topics = [
+    // Second World War
     Topic(
       id: 1,
       title: 'II. Világháború',
       questions: [
         Question(
           id: 1,
-          imgPath: 'images/question001.webp',
+          imgPath: 'images/question_wwii_001.webp',
           questionText: 'Melyik eseményt emlegetjük a második világháború kezdeteként?',
           answers: [
             Answer(
@@ -62,7 +63,7 @@ class QuizController extends GetxController {
         ),
         Question(
           id: 3,
-          imgPath: 'images/question003.webp',
+          imgPath: 'images/question_wwii_003.webp',
           questionText: 'Mi volt a D-nap fõ célja?',
           answers: [
             Answer(
@@ -89,7 +90,7 @@ class QuizController extends GetxController {
         ),
         Question(
           id: 4,
-          imgPath: 'images/question004.jpeg',
+          imgPath: 'images/question_wwii_004.jpeg',
           questionText: 'Melyik csata bizonyult döntõnek a Szövetségesek javára a keleti fronton?',
           answers: [
             Answer(
@@ -273,6 +274,7 @@ class QuizController extends GetxController {
       ],
     ),
 
+    // Roman Empire
     Topic(
       id: 2,
       title: 'A Római Birodalom',
@@ -391,21 +393,812 @@ class QuizController extends GetxController {
       ],
     ),
 
+    // 1848 Revolution
     Topic(
       id: 3,
-      title: '48-as forradalom',
+      title: '48-49-es forradalom és szabadságharc',
       imgPath: 'images/topic003.webp',
+      questions: [
+        Question(
+          id: 1,
+          questionText: 'Melyik esemény indította el az 1848-as forradalmak sorozatát?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'A párizsi forradalom kirobbanása',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'A bécsi forradalom kirobbanása',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'A frankfurti parlament megalakulása',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'A pesti forradalom kirobbanása',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 2,
+          questionText: 'Melyik országban nem volt jelentős a forradalmi mozgalom 1848-ban?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Franciaország',
+              correct: false,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Oroszország',
+              correct: true,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Magyarország',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Olaszország',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 3,
+          questionText: 'Mi volt a célja a pesti forradalomnak 1848-ban?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Teljes függetlenség kivívása',
+              correct: false,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Alkotmányos reformok és sajtószabadság',
+              correct: true,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'A monarchia teljes megdöntése',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'A feudális rendszer teljes eltörlése',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 4,
+          questionText: 'Melyik csata volt döntő az olasz függetlenségi háborúk során?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Custoza csatája',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Solferino csatája',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Magenta csatája',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Novara csatája',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 5,
+          questionText: 'Melyik dokumentum foglalta össze a magyar forradalmárok követeléseit?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Áprilisi törvények',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Pesti nyilatkozat',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Debreceni program',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Kossuth-kiáltvány',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 6,
+          questionText: 'Ki volt a magyar forradalom egyik vezető alakja?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Kossuth Lajos',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Ferenc József',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Széchenyi István',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Wesselényi Miklós',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 7,
+          questionText: 'Melyik ország maradt semleges az 1848-as forradalmak idején?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Németország',
+              correct: false,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Franciaország',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Svédország',
+              correct: true,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Olaszország',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 8,
+          questionText: 'Melyik esemény zárta le a forradalmi időszakot Magyarországon?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Világosi fegyverletétel',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Schwechati csata',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Az őszi hadjárat kezdete',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'A tavaszi hadjárat vége',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 9,
+          questionText: 'Melyik konferencián döntöttek az 1848-as forradalmak utáni Európa újrarendezéséről?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Párizsi békekonferencia',
+              correct: false,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Olasz hadi konferencia',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Bécsi kongresszus',
+              correct: true,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Berlini konferencia',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 10,
+          questionText: 'Mi volt az 1848-as forradalmak egyik fő következménye?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'A polgári reformok elterjedése Európában',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'A szocialista mozgalmak erősödése',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'A nacionalizmus elterjedése',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Az ipari forradalom meggyorsulása',
+              correct: false,
+            ),
+          ],
+        ),
+      ],
     ),
-    Topic(
-      id: 4,
-      title: 'Az ipari forradalom',
-      imgPath: 'images/topic004.webp',
 
-    ),
+    // Industrial Revolution
     Topic(
-      id: 5,
-      title: 'A Nagy Háború',
-      imgPath: 'images/topic005.webp',
+      id: 1,
+      title: 'Ipari forradalom',
+      imgPath: 'images/topic004.webp',
+      questions: [
+        Question(
+          id: 1,
+          questionText: 'Melyik találmány jelentette az ipari forradalom kezdetét?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'A gőzgép megalkotása',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Az elektromosság felfedezése',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'A fonógép megjelenése',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'A modern öntödei technika bevezetése',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 2,
+          questionText: 'Mely országban kezdődött az ipari forradalom?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Anglia',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Németország',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Franciaország',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Amerikai Egyesült Államok',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 3,
+          questionText: 'Mi volt a gőzgép fő hatása az iparra?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'A mezőgazdaság automatizálása',
+              correct: false,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'A szállítási sebesség növelése',
+              correct: true,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'A munkaórák csökkentése',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Az energiafogyasztás csökkentése',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 4,
+          questionText: 'Melyik város vált az ipari forradalom egyik központjává Angliában?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Manchester',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'London',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Birmingham',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Liverpool',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 5,
+          questionText: 'Melyik találmány forradalmasította a textilipart?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'A Spinning Jenny',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'A gőzmozdony',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'A villanykörte',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'A hidraulikus sajt',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 6,
+          questionText: 'Ki volt az ipari forradalom egyik vezető alakja?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'James Watt',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Isaac Newton',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Thomas Edison',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Alexander Graham Bell',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 7,
+          questionText: 'Melyik országban tört ki az első ipari forradalom utáni munkásmozgalom?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Anglia',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Németország',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Franciaország',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Oroszország',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 8,
+          questionText: 'Melyik ipari forradalom utáni esemény hívta fel a figyelmet a munkások helyzetére?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Chartista mozgalom',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Októberi forradalom',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Júliusi forradalom',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Márciusi forradalom',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 9,
+          questionText: 'Melyik konferencián tettek kísérletet az európai nagyhatalmak az ipari forradalom hatásainak kezelésére?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Bécsi kongresszus',
+              correct: false,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Párizsi békekonferencia',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Berlini kongresszus',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Kongresszus a berlini kongresszus után',
+              correct: true,
+            ),
+          ],
+        ),
+        Question(
+          id: 10,
+          questionText: 'Milyen hatással volt az ipari forradalom a társadalomra?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Növelte a társadalmi egyenlőtlenséget',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Csökkentette a társadalmi rétegződést',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Növelte a munkanélküliséget',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Csökkentette a gazdasági fejlődést',
+              correct: false,
+            ),
+          ],
+        ),
+      ],
     ),
+
+    // The Great War (WWI)
+    Topic(
+      id: 1,
+      title: 'A Nagy Háború (I. világháború)',
+      imgPath: 'images/topic005.webp',
+      questions: [
+        Question(
+          id: 1,
+          questionText: 'Melyik esemény indította el az első világháborút?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Az osztrák trónörökös, Ferenc Ferdinánd meggyilkolása',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'A berlini blokád kihirdetése',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Az Osztrák-Magyar Monarchia összeomlása',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Az angol flotta támadása a német kikötőkre',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 2,
+          questionText: 'Melyik ország volt az első, amely hadat üzent egy másik nagyhatalomnak az első világháborúban?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Osztrák-Magyar Monarchia',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Németország',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Oroszország',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Egyesült Királyság',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 3,
+          questionText: 'Melyik csata volt az első világháború egyik legvéresebb ütközete?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Verduni csata',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Marne-i csata',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Tannenbergi csata',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Somme-i csata',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 4,
+          imgPath: 'images/question_wwi_004.jpeg',
+          questionText: 'Melyik évben csatlakozott az Amerikai Egyesült Államok az első világháborúhoz?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: '1917',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: '1915',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: '1916',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: '1918',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 5,
+          questionText: 'Mi volt az első világháború egyik fő kiváltó oka?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Nacionalizmus',
+              correct: false,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Imperializmus',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Gazdasági válság',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Szarajevói merénylet',
+              correct: true,
+            ),
+          ],
+        ),
+        Question(
+          id: 6,
+          questionText: 'Melyik ország vezette a központi hatalmakat az első világháborúban?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Németország',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Oroszország',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Egyesült Királyság',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Franciaország',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 7,
+          questionText: 'Melyik volt az első világháború egyik legjelentősebb tengelyhatalma?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Németország',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Oroszország',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Ausztria-Magyar Monarchia',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Olaszország',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 8,
+          questionText: 'Melyik évben kötöttek békét az első világháborúban?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: '1918',
+              correct: false,
+            ),
+            Answer(
+              id: 2,
+              answerText: '1919',
+              correct: true,
+            ),
+            Answer(
+              id: 3,
+              answerText: '1920',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: '1921',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 9,
+          questionText: 'Melyik város volt az első világháborút lezáró békeszerződés aláírásának helyszíne?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'Versailles',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'Párizs',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'Bécs',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'Berlin',
+              correct: false,
+            ),
+          ],
+        ),
+        Question(
+          id: 10,
+          questionText: 'Melyik volt az első világháború egyik legjelentősebb csatahajója?',
+          answers: [
+            Answer(
+              id: 1,
+              answerText: 'HMS Dreadnought',
+              correct: true,
+            ),
+            Answer(
+              id: 2,
+              answerText: 'SMS Bismarck',
+              correct: false,
+            ),
+            Answer(
+              id: 3,
+              answerText: 'USS Arizona',
+              correct: false,
+            ),
+            Answer(
+              id: 4,
+              answerText: 'IJN Yamato',
+              correct: false,
+            ),
+          ],
+        ),
+      ],
+    )
   ];
 }

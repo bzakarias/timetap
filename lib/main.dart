@@ -34,6 +34,10 @@ class MyApp extends StatelessWidget {
           name: Routes.TEST_GRADUATION,
           page: () => const TestGraduationView(),
         ),
+        GetPage(
+          name: Routes.HOME,
+          page: () => HomeView(),
+        ),
       ],
     );
   }

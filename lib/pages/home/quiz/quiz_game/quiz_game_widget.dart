@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:timetap/core/routes.dart';
 import 'package:timetap/models/quiz.dart';
 import 'package:timetap/pages/home/quiz/quiz_controller.dart';
 import 'package:timetap/pages/home/quiz/quiz_game/quiz_game_controller.dart';
@@ -14,249 +15,254 @@ class QuizGameWidget extends StatelessWidget {
     return GetBuilder<QuizGameController>(
       init: QuizGameController(),
       builder: (controller){
-        Topic? topic = Get.arguments as Topic;
-        final List<Question> questions = topic.questions!;
-        final Question question = questions[controller.questionIndex];
-        return Scaffold(
-          body: Stack(
-            children: [
-              Column(
-                children: [
-                  // Image
-                  Stack(
-                    children: [
-                      SizedBox(
-                        height: Get.height * .4,
-                        width: Get.width,
-                        child: Image.asset(
-                          question.imgPath ?? 'images/wwii.webp',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 50, 10, 0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            InkWell(
-                              child: Container(
-                                width: 40,
-                                height: 40,
-                                padding: const EdgeInsets.all(5),
-                                decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(.5),
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: Icon(
-                                  Icons.close,
-                                  color: Colors.white.withOpacity(.9),
-                                  size: 20,
-                                ),
-                              ),
-                              onTap: (){
-                                Get.back();
-                              },
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-
-                  // Progress indicator
-                  Stack(
-                    children: [
-                      Container(
-                        width: Get.width,
-                        height: 5,
-                        color: color1.withOpacity(.5),
-                      ),
-                      Positioned(
-                        left: 0,
-                        child: Container(
-                          width: Get.width * (controller.questionIndex+1) / questions.length,
-                          height: 5,
-                          color: color1,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 5, 20, 0),
-                    child: Row(
+        Topic? topic = Get.arguments as Topic?;
+        final List<Question>? questions = topic?.questions;
+        final Question? question = questions?[controller.questionIndex];
+        if(topic != null && questions != null &&question != null){
+          return Scaffold(
+            body: Stack(
+              children: [
+                Column(
+                  children: [
+                    // Image
+                    Stack(
                       children: [
-                        Expanded(
-                          child: Text(
-                            '${controller.questionIndex+1}. kérdés a ${questions.length}-bõl',
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                              color: color1,
-                              fontFamily: 'Roboto Regular',
-                              fontSize: 12,
-                            ),
+                        SizedBox(
+                          height: Get.height * .4,
+                          width: Get.width,
+                          child: Image.asset(
+                            question.imgPath ?? topic.imgPath ?? '',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 50, 10, 0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              InkWell(
+                                child: Container(
+                                  width: 40,
+                                  height: 40,
+                                  padding: const EdgeInsets.all(5),
+                                  decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(.5),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Icon(
+                                    Icons.close,
+                                    color: Colors.white.withOpacity(.9),
+                                    size: 20,
+                                  ),
+                                ),
+                                onTap: (){
+                                  Get.back();
+                                },
+                              ),
+                            ],
                           ),
                         ),
                       ],
                     ),
-                  ),
 
-                  // Topic
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-                    child: Text(
-                      'A második világháború',
-                      style: TextStyle(
-                        color: color3.withOpacity(.5),
-                        fontFamily: 'Roboto Regular',
-                        fontSize: 16,
+                    // Progress indicator
+                    Stack(
+                      children: [
+                        Container(
+                          width: Get.width,
+                          height: 5,
+                          color: color1.withOpacity(.5),
+                        ),
+                        Positioned(
+                          left: 0,
+                          child: Container(
+                            width: Get.width * (controller.questionIndex+1) / questions.length,
+                            height: 5,
+                            color: color1,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 5, 20, 0),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              '${controller.questionIndex+1}. kérdés a ${questions.length}-bõl',
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                color: color1,
+                                fontFamily: 'Roboto Regular',
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ),
 
-                  // Question
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(5, 0, 5, 10),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            '${controller.questionIndex+1}. ${question.questionText}' ?? '',
+                    // Topic
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+                      child: Text(
+                        'A második világháború',
+                        style: TextStyle(
+                          color: color3.withOpacity(.5),
+                          fontFamily: 'Roboto Regular',
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+
+                    // Question
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(5, 0, 5, 10),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              '${controller.questionIndex+1}. ${question.questionText}' ?? '',
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                color: color3,
+                                fontFamily: 'LatoBold',
+                                fontSize: 24,
+                                fontWeight: FontWeight.w900,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+
+                    // Answers
+                    Expanded(
+                      child: GridView.builder(
+                          padding: const EdgeInsets.all(10),
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 1,
+                            crossAxisSpacing: 10,
+                            mainAxisSpacing: 10,
+                            childAspectRatio: 5,
+                          ),
+                          itemCount: questions[controller.questionIndex].answers?.length,
+                          itemBuilder: (context, index){
+                            Answer answer = questions[controller.questionIndex].answers![index];
+                            return InkWell(
+                              onTap: (){
+                                controller.answerQuestion(answer);
+                              },
+                              child: answerContainer(controller, answer),
+                            );
+                          }
+                      ),
+                    ),
+
+
+                    // Next
+                    if(controller.answered) Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 50),
+                        child: Row(
+                          children: [
+                            SizedBox(width: Get.width * .5),
+                            Expanded(
+                              child: InkWell(
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: color1,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: const Padding(
+                                      padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                                      child: Text(
+                                        'Következő',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'LatoBold',
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  onTap: (){
+                                    controller.nextQuestion();
+                                  }
+                              ),
+                            ),
+                          ],
+                        )
+                    ),
+
+                  ],
+                ),
+
+                if(controller.end) Container(
+                  height: Get.height,
+                  width: Get.width,
+                  color: Colors.black.withOpacity(.9),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            'Kitöltötted a kvízt! Pontjaid: ${controller.scores}/${questions.length}',
                             textAlign: TextAlign.center,
                             style: const TextStyle(
-                              color: color3,
+                              color: color4,
                               fontFamily: 'LatoBold',
                               fontSize: 24,
                               fontWeight: FontWeight.w900,
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-
-                  // Answers
-                  Expanded(
-                    child: GridView.builder(
-                        padding: const EdgeInsets.all(10),
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 1,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 10,
-                          childAspectRatio: 5,
-                        ),
-                        itemCount: questions[controller.questionIndex].answers?.length,
-                        itemBuilder: (context, index){
-                          Answer answer = questions[controller.questionIndex].answers![index];
-                          return InkWell(
-                            onTap: (){
-                              controller.answerQuestion(answer);
-                            },
-                            child: answerContainer(controller, answer),
-                          );
-                        }
-                    ),
-                  ),
-
-
-                  // Next
-                  if(controller.answered) Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 50),
-                      child: Row(
-                        children: [
-                          SizedBox(width: Get.width * .5),
-                          Expanded(
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: InkWell(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: color1,
-                                    borderRadius: BorderRadius.circular(20),
+                              onTap: (){
+                                controller.clearAll();
+                                Get.toNamed(Routes.HOME);
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    width: 1.5,
+                                    color: color4,
                                   ),
-                                  alignment: Alignment.center,
-                                  child: const Padding(
-                                    padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                                    child: Text(
-                                      'Következő',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: 'LatoBold',
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w900,
-                                      ),
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: Colors.transparent,
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                                  child: Text(
+                                    'Close',
+                                    style: TextStyle(
+                                      color: color4,
+                                      fontFamily: 'LatoBold',
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w900,
                                     ),
                                   ),
                                 ),
-                                onTap: (){
-                                  controller.nextQuestion();
-                                }
+                              ),
                             ),
                           ),
                         ],
-                      )
-                  ),
-
-                ],
-              ),
-
-              if(controller.end) Container(
-                height: Get.height,
-                width: Get.width,
-                color: Colors.black.withOpacity(.9),
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          'Kitöltotted a kvízt! Pontjaid: ${controller.scores}/${questions.length}',
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            color: color4,
-                            fontFamily: 'LatoBold',
-                            fontSize: 24,
-                            fontWeight: FontWeight.w900,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: InkWell(
-                            onTap: (){
-                              controller.clearAll();
-                              Get.back();
-                            },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                  width: 1.5,
-                                  color: color4,
-                                ),
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.transparent,
-                              ),
-                              child: const Padding(
-                                padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                                child: Text(
-                                  'Close',
-                                  style: TextStyle(
-                                    color: color4,
-                                    fontFamily: 'LatoBold',
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w900,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        );
+              ],
+            ),
+          );
+        }
+        else {
+          return Container();
+        }
       },
     );
   }
