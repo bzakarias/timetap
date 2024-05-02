@@ -3,13 +3,24 @@ class Topic {
     this.id,
     this.title,
     this.questions,
+    this.chapters,
     this.imgPath
   });
 
   final int? id;
   final String? title;
   final List<Question>? questions;
+  final List<Chapter>? chapters;
   final String? imgPath;
+}
+
+class Chapter {
+  Chapter({
+    this.id,
+    this.title
+});
+  final int? id;
+  final String? title;
 }
 
 class Question {

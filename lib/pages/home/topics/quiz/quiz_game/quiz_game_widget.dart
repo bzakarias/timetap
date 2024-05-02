@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:timetap/core/routes.dart';
 import 'package:timetap/models/quiz.dart';
-import 'package:timetap/pages/home/quiz/quiz_controller.dart';
-import 'package:timetap/pages/home/quiz/quiz_game/quiz_game_controller.dart';
+import 'package:timetap/pages/home/topics/quiz/quiz_game/quiz_game_controller.dart';
 import 'package:timetap/theme/color_theme.dart';
 
 class QuizGameWidget extends StatelessWidget {
@@ -239,7 +238,7 @@ class QuizGameWidget extends StatelessWidget {
                                 child: const Padding(
                                   padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
                                   child: Text(
-                                    'Close',
+                                    'Bezárás',
                                     style: TextStyle(
                                       color: color4,
                                       fontFamily: 'LatoBold',

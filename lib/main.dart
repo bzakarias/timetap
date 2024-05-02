@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:timetap/core/routes.dart';
 import 'package:timetap/pages/home/home_view.dart';
-import 'package:timetap/pages/home/quiz/quiz_game/quiz_game_widget.dart';
+import 'package:timetap/pages/home/topics/quiz/quiz_game/quiz_game_widget.dart';
+import 'package:timetap/pages/what_if/what_if_view.dart';
 
 import 'pages/test_graduation/test_graduation_view.dart';
 
@@ -37,6 +38,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: Routes.HOME,
           page: () => HomeView(),
+        ),
+        GetPage(
+          name: Routes.WHAT_IF,
+          page: () => const WhatIfView(),
         ),
       ],
     );

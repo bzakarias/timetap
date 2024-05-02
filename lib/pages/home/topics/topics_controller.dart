@@ -1,12 +1,13 @@
-import 'package:get/get.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:timetap/models/quiz.dart';
 
-class QuizController extends GetxController {
+class TopicsController extends GetxController {
   List<Topic> topics = [
     // Second World War
     Topic(
       id: 1,
       title: 'II. Világháború',
+      imgPath: 'images/wwii.webp',
       questions: [
         Question(
           id: 1,
@@ -272,6 +273,14 @@ class QuizController extends GetxController {
           ],
         ),
       ],
+      chapters: [
+        Chapter(id: 1, title: 'A háború kitörése és előzményei'),
+        Chapter(id: 2, title: 'A háború Európában'),
+        Chapter(id: 3, title: 'A háború a Csendes-óceánon'),
+        Chapter(id: 4, title: 'A háború vége Európában'),
+        Chapter(id: 5, title: 'A háború vége a Csendes-óceánon'),
+        Chapter(id: 6, title: 'Az utóhatások és a béke megteremtése')
+      ],
     ),
 
     // Roman Empire
@@ -390,6 +399,13 @@ class QuizController extends GetxController {
             Answer(id: 4, answerText: 'A második pun háború vége', correct: false),
           ],
         ),
+      ],
+      chapters: [
+        Chapter(id: 7, title: 'A Római Birodalom kialakulása és terjeszkedése'),
+        Chapter(id: 8, title: ' birodalom fénykora és gazdasági fejlődése'),
+        Chapter(id: 9, title: 'A birodalom válsága és belső problémái'),
+        Chapter(id: 10, title: 'A birodalom szétesése és a barbár inváziók'),
+        Chapter(id: 11, title: 'A Római Birodalom utóhatásai és öröksége'),
       ],
     ),
 
@@ -660,6 +676,13 @@ class QuizController extends GetxController {
           ],
         ),
       ],
+      chapters: [
+        Chapter(id: 11, title: 'Az 1848-49-es forradalom előzményei'),
+        Chapter(id: 12, title: 'A szabadságharc kitörése és terjedése'),
+        Chapter(id: 13, title: 'Az 1848-49-es forradalom katonai eseményei'),
+        Chapter(id: 14, title: 'A forradalom bukása és az osztrák megtorlás'),
+        Chapter(id: 15, title: 'Az 1848-49-es szabadságharc utóhatásai'),
+      ],
     ),
 
     // Industrial Revolution
@@ -667,6 +690,13 @@ class QuizController extends GetxController {
       id: 1,
       title: 'Ipari forradalom',
       imgPath: 'images/topic004.webp',
+      chapters: [
+        Chapter(id: 16, title: 'Az ipari forradalom kezdete és elterjedése'),
+        Chapter(id: 17, title: 'Az ipari forradalom hatása a társadalomra'),
+        Chapter(id: 18, title: 'Az ipari forradalom technológiai újításai'),
+        Chapter(id: 19, title: 'Az ipari forradalom gazdasági hatásai'),
+        Chapter(id: 20, title: 'Az ipari forradalom utóhatásai és a modernizáció'),
+      ],
       questions: [
         Question(
           id: 1,
@@ -936,6 +966,14 @@ class QuizController extends GetxController {
       id: 1,
       title: 'A Nagy Háború (I. világháború)',
       imgPath: 'images/topic005.webp',
+      chapters: [
+        Chapter(id: 21, title: 'Az Első Világháború Kitörése és Hadifrontok Kialakulása'),
+        Chapter(id: 22, title: 'A Tengelyhatalmak és a Szövetségesek Küzdelme'),
+        Chapter(id: 23, title: 'Az Árkok Háborúja és a Gáztámadások Túlélése'),
+        Chapter(id: 24, title: 'A Háború Fronton Kívül: A Tengeri Ütközetek és A Légiharcok Kora'),
+        Chapter(id: 25, title: 'A Háború Vége és a Békeszerződések'),
+
+      ],
       questions: [
         Question(
           id: 1,

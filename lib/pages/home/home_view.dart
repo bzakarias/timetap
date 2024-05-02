@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 import 'package:get/get.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:timetap/core/routes.dart';
 import 'package:timetap/pages/home/home_controller.dart';
 import 'package:timetap/pages/home/profile/profile_widget.dart';
-import 'package:timetap/pages/home/quiz/quiz_widget.dart';
 import 'package:timetap/pages/home/start_page/start_page_widget.dart';
+import 'package:timetap/pages/home/topics/topics_view.dart';
 import 'package:timetap/pages/home/video_feed/video_feed_widget.dart';
 import 'package:timetap/theme/color_theme.dart';
 
@@ -95,7 +93,7 @@ class HomeView extends StatelessWidget {
       return StartPageWidget();
     }
     else if(currentPage == 'quiz'){
-      return QuizWidget();
+      return TopicsView();
     }
     else if(currentPage == 'video'){
       return VideoFeedWidget();

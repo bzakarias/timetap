@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:line_icons/line_icons.dart';
+import 'package:timetap/core/routes.dart';
 import 'package:timetap/pages/home/start_page/start_page_controller.dart';
 import 'package:timetap/theme/color_theme.dart';
 
@@ -463,6 +465,341 @@ class StartPageWidget extends StatelessWidget {
                       ],
                     )
                   ),
+                ),
+                const SizedBox(height: 20),
+                // Trial graduation
+                Stack(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              color1.withOpacity(.6),
+                              color1.withOpacity(1),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 7,
+                              offset: const Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                      child: Row(
+                                        children: [
+                                          Expanded(
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                const Flexible(
+                                                  flex: 0,
+                                                  child: Text(
+                                                    'Próbaérettségi',
+                                                    overflow: TextOverflow.ellipsis,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      color: color4,
+                                                      fontFamily: 'LatoBold',
+                                                      fontSize: 20,
+                                                      fontWeight: FontWeight.w900,
+                                                    ),
+                                                  ),
+                                                ),
+                                                const SizedBox(width: 10),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                    color: color2,
+                                                    borderRadius: BorderRadius.circular(20),
+                                                  ),
+                                                  child: const Padding(
+                                                    padding: EdgeInsets.fromLTRB(5, 2.5, 5, 2.5),
+                                                    child: Text(
+                                                      'ÚJ FUNKCIÓ',
+                                                      style: TextStyle(
+                                                        color: color4,
+                                                        fontFamily: 'RobotoRegular',
+                                                        fontSize: 12,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const Text(
+                                      'Teszteld a tudásodat a nagy megmérettetés elõtt!',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: color4,
+                                        fontFamily: 'RobotoRegular',
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
+                                      child: Row(
+                                        children: [
+                                          Expanded(
+                                              child: InkWell(
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                    color: color4,
+                                                    borderRadius: BorderRadius.circular(20),
+                                                  ),
+                                                  child: const Padding(
+                                                    padding: EdgeInsets.fromLTRB(
+                                                      20, 5, 20, 5,
+                                                    ),
+                                                    child: Text(
+                                                      'Kezdés',
+                                                      textAlign: TextAlign.center,
+                                                      style: TextStyle(
+                                                        color: color1,
+                                                        fontFamily: 'LatoBold',
+                                                        fontSize: 16,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                                onTap: (){
+                                                  Get.toNamed(Routes.TEST_GRADUATION);
+                                                },
+                                              )
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 20),
+                              Flexible(
+                                flex: 0,
+                                child: Container(
+                                    width: 75,
+                                    height: 75,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: color2,
+                                    ),
+                                    child: const Center(
+                                      child: Icon(
+                                        LineIcons.graduationCap,
+                                        size: 35,
+                                        color: color4,
+                                      ),
+                                    )
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 10,
+                      top: 10,
+                      child: Transform.rotate(
+                        angle: -0.785398, // 45 degrees in radians
+                        child: Container(
+                          color: color5,
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+                          child: const Text(
+                            'PRO',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                // What if
+                Stack(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              color2.withOpacity(.6),
+                              color2.withOpacity(1),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 7,
+                              offset: const Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                      child: Row(
+                                        children: [
+                                          Expanded(
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                const Flexible(
+                                                  flex: 0,
+                                                  child: Text(
+                                                    'Mi lett volna, ha...?',
+                                                    overflow: TextOverflow.ellipsis,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      color: color4,
+                                                      fontFamily: 'LatoBold',
+                                                      fontSize: 20,
+                                                      fontWeight: FontWeight.w900,
+                                                    ),
+                                                  ),
+                                                ),
+                                                const SizedBox(width: 10),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                    color: color1,
+                                                    borderRadius: BorderRadius.circular(20),
+                                                  ),
+                                                  child: const Padding(
+                                                    padding: EdgeInsets.fromLTRB(5, 2.5, 5, 2.5),
+                                                    child: Text(
+                                                      'JÁTÉK',
+                                                      style: TextStyle(
+                                                        color: color4,
+                                                        fontFamily: 'RobotoRegular',
+                                                        fontSize: 12,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const Text(
+                                      'Alakítsd a történelmet, hozz döntéseket a krízishelyzetekben!',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: color4,
+                                        fontFamily: 'RobotoRegular',
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
+                                      child: Row(
+                                        children: [
+                                          Expanded(
+                                              child: InkWell(
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                    color: color4,
+                                                    borderRadius: BorderRadius.circular(20),
+                                                  ),
+                                                  child: const Padding(
+                                                    padding: EdgeInsets.fromLTRB(
+                                                      20, 5, 20, 5,
+                                                    ),
+                                                    child: Text(
+                                                      'Kezdés',
+                                                      textAlign: TextAlign.center,
+                                                      style: TextStyle(
+                                                        color: color2,
+                                                        fontFamily: 'LatoBold',
+                                                        fontSize: 16,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                                onTap: (){
+                                                  Get.toNamed(Routes.WHAT_IF);
+                                                },
+                                              )
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 20),
+                              Flexible(
+                                flex: 0,
+                                child: SizedBox(
+                                  width: 75,
+                                  height: 75,
+                                  child: Image.asset(
+                                    'images/what_if_logo.webp',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 10,
+                      top: 10,
+                      child: Transform.rotate(
+                        angle: -0.785398, // 45 degrees in radians
+                        child: Container(
+                          color: color6,
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+                          child: const Text(
+                            'DEMO',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 100)
               ],

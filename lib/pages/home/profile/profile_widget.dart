@@ -325,7 +325,7 @@ class ProfileWidget extends StatelessWidget {
                             child: Text(
                               'Eger ostroma',
                               overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 color: Colors.black87,
                                 fontFamily: 'LatoBold',
                                 fontSize: 20,
