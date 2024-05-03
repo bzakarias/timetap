@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:timelines/timelines.dart';
 import 'package:timetap/models/quiz.dart';
 import 'package:timetap/pages/home/topics/quiz/quiz_widget.dart';
 import 'package:timetap/pages/home/topics/topics_controller.dart';
@@ -152,6 +153,15 @@ class TopicsView extends StatelessWidget {
                                 ],
                               ),
                             ),
+                            // IMAGE
+                            SizedBox(
+                              height: 300,
+                              width: Get.width,
+                              child: Image.asset(
+                                topic.imgPath ?? 'images/wwii.webp',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
                             // QUIZ
                             Padding(
                               padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
@@ -163,13 +173,13 @@ class TopicsView extends StatelessWidget {
                             ),
                             // CHAPTERS
                             const Padding(
-                              padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                              padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                               child: Row(
                                 children: [
                                   Expanded(
                                     child: Text(
                                   'Fejezetek',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     color: color1,
                                     fontSize: 24,
                                     fontFamily: 'LatoBold',
@@ -182,39 +192,270 @@ class TopicsView extends StatelessWidget {
                             if(topic.chapters != null) Column(
                               children: topic.chapters!.map((chapter) => Padding(
                                 padding: const EdgeInsets.fromLTRB(10, 2.5, 10, 2.5),
-                                child: Row(
+                                child: Stack(
                                   children: [
-                                    Expanded(
-                                        child: Container(
-                                            decoration: BoxDecoration(
-                                              color: color4,
-                                              borderRadius: BorderRadius.circular(10),
-                                              boxShadow: [
-                                                BoxShadow(
-                                                  color: color1.withOpacity(0.1),
-                                                  spreadRadius: 2,
-                                                  blurRadius: 10,
-                                                  offset: const Offset(0, 3),
+                                    Container(
+                                      padding: const EdgeInsets.only(bottom: 5),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(10),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(0.1),
+                                            spreadRadius: 2,
+                                            blurRadius: 7,
+                                            offset: const Offset(0, 3),
+                                          ),
+                                        ],
+                                      ),
+                                      child: ListTile(
+                                        title: Text(
+                                          chapter.title ?? 'no title',
+                                          style: const TextStyle(
+                                            color: color1,
+                                            fontSize: 18,
+                                            fontFamily: 'LatoBold',
+                                          ),
+                                        ),
+                                        subtitle: chapter.desc != null ? Text(
+                                          chapter.desc!,
+                                          style: const TextStyle(
+                                            color: color3,
+                                            fontSize: 14,
+                                            fontFamily: 'RobotoRegular',
+                                          ),
+                                        ) : null,
+                                        trailing: (chapter.progress == 100 || chapter.progress == 0) ? Icon(
+                                          LineIcons.checkCircle,
+                                          color: chapter.progress == 100 ? color5 : color3.withOpacity(.25),
+                                          size: 30,
+                                        ) : null,
+                                      ),
+                                    ),
+                                    if(chapter.progress != 100 && chapter.progress != 0) Positioned(
+                                      bottom: 0,
+                                      child: Container(
+                                        height: 2,
+                                        width: (Get.width - 20)  * (chapter.progress ?? 0) / 100,
+                                        color: color5
+                                      )
+                                    ),
+                                    if(chapter.progress != 100 && chapter.progress != 0) Positioned(
+                                      bottom: 3,
+                                      child: SizedBox(
+                                        width: chapter.progress! < 20 ? (Get.width - 20)  * 0.2 : ((Get.width - 20)  * (chapter.progress ?? 0) / 100),
+                                        child: Text(
+                                          '${chapter.progress} %',
+                                          textAlign: TextAlign.center,
+                                          style: const TextStyle(
+                                            color: color5,
+                                            fontSize: 12,
+                                            fontFamily: 'RobotoRegular',
+                                          ),
+                                        ),
+                                      )
+                                    ),
+                                  ],
+                                )
+                              )).toList(),
+                            ),
+
+                            // TIMELINE
+                            const Padding(
+                              padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                      child: Text(
+                                        'Idővonal',
+                                        style: TextStyle(
+                                          color: color1,
+                                          fontSize: 24,
+                                          fontFamily: 'LatoBold',
+                                        ),
+                                      )
+                                  )
+                                ],
+                              ),
+                            ),
+
+                            SizedBox(
+                              height: Get.height * .4,
+                              child: Timeline.tileBuilder(
+                                  theme: TimelineThemeData(
+                                    color: color2,
+                                    connectorTheme: const ConnectorThemeData(
+                                      space: 30.0,
+                                      thickness: 5.0,
+                                    ),
+                                  ),
+                                  builder: TimelineTileBuilder.fromStyle(
+
+                                    itemCount: topic.events != null ? topic.events!.length : 0,
+                                    contentsAlign: ContentsAlign.alternating,
+                                    contentsBuilder: (context, index){
+                                      Event event = topic.events![index];
+                                      return Padding(
+                                        padding: const EdgeInsets.all(20),
+                                        child: InkWell(
+                                          onTap: (){
+                                            Get.dialog(
+                                              Dialog(
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(15),
                                                 ),
-                                              ],
-                                            ),
-                                            child: Padding(
-                                              padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                              child: Text(
-                                                chapter.title ?? 'no title',
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                    color: color4,
+                                                    borderRadius: BorderRadius.circular(15),
+                                                  ),
+                                                  child: ConstrainedBox(
+                                                    constraints: BoxConstraints(
+                                                      maxHeight: Get.height * .8,
+                                                    ),
+                                                    child: SingleChildScrollView(
+                                                      child: Column(
+                                                        mainAxisSize: MainAxisSize.min,
+                                                        children: [
+                                                          // TITLE
+                                                          Padding(
+                                                            padding: const EdgeInsets.fromLTRB(20, 20, 20, 5),
+                                                            child: Row(
+                                                              children: [
+                                                                Expanded(
+                                                                  child: Text(
+                                                                    event.title ?? '',
+                                                                    textAlign: TextAlign.center,
+                                                                    style: const TextStyle(
+                                                                      color: color1,
+                                                                      fontSize: 22,
+                                                                      fontFamily: 'LatoBold',
+                                                                      fontWeight: FontWeight.bold,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+
+                                                          // DESC
+                                                          Padding(
+                                                            padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
+                                                            child: Row(
+                                                              children: [
+                                                                Expanded(
+                                                                  child: Text(
+                                                                    event.description ?? '',
+                                                                    textAlign: TextAlign.center,
+                                                                    style: TextStyle(
+                                                                      color: color1.withOpacity(.5),
+                                                                      fontSize: 16,
+                                                                      fontFamily: 'LatoBold',
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+
+                                                          // Calendar
+                                                          Padding(
+                                                            padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
+                                                            child: Row(
+                                                              children: [
+                                                                const Flexible(
+                                                                  flex: 0,
+                                                                  child: Padding(
+                                                                    padding: EdgeInsets.only(right: 10),
+                                                                    child: Icon(
+                                                                      LineIcons.calendar,
+                                                                      color: color2,
+                                                                      size: 30,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                Expanded(
+                                                                  child: Text(
+                                                                    event.date ?? '',
+                                                                    textAlign: TextAlign.left,
+                                                                    style: const TextStyle(
+                                                                      color: color2,
+                                                                      fontSize: 16,
+                                                                      fontFamily: 'LatoBold',
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+
+                                                          // Long text
+                                                          Padding(
+                                                            padding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
+                                                            child: Row(
+                                                              children: [
+                                                                Expanded(
+                                                                  child: Text(
+                                                                    event.largeText ?? '',
+                                                                    textAlign: TextAlign.justify,
+                                                                    style: const TextStyle(
+                                                                      color: color3,
+                                                                      fontSize: 14,
+                                                                      fontFamily: 'RobotoRegular',
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              Text(
+                                                event.date ?? '',
+                                                textAlign: index % 2 == 0 ? TextAlign.start : TextAlign.end,
                                                 style: const TextStyle(
-                                                  color: color1,
+                                                  color: color3,
+                                                  fontSize: 16,
+                                                  fontFamily: 'LatoBold',
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              Text(
+                                                event.title ?? '',
+                                                textAlign: index % 2 == 0 ? TextAlign.start : TextAlign.end,
+                                                style: const TextStyle(
+                                                  color: color2,
                                                   fontSize: 18,
                                                   fontFamily: 'LatoBold',
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
-                                            )
-                                        )
-                                    )
-                                  ],
-                                )
-                              )).toList(),
+                                              Text(
+                                                event.description ?? '',
+                                                textAlign: index % 2 == 0 ? TextAlign.start : TextAlign.end,
+                                                style: const TextStyle(
+                                                  color: color3,
+                                                  fontSize: 14,
+                                                  fontFamily: 'RobotoRegular',
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  )
+                              ),
                             ),
                           ],
                         ),

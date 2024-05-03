@@ -274,12 +274,78 @@ class TopicsController extends GetxController {
         ),
       ],
       chapters: [
-        Chapter(id: 1, title: 'A háború kitörése és előzményei'),
-        Chapter(id: 2, title: 'A háború Európában'),
-        Chapter(id: 3, title: 'A háború a Csendes-óceánon'),
-        Chapter(id: 4, title: 'A háború vége Európában'),
-        Chapter(id: 5, title: 'A háború vége a Csendes-óceánon'),
+        Chapter(id: 1, title: 'A háború kitörése és előzményei', progress: 100,),
+        Chapter(id: 2, title: 'A II. világháború története I.', desc: 'A II. világháború története a Szovjetunió megtámadásáig', progress: 100),
+        Chapter(id: 3, title: 'A II. világháború története II.', desc: 'A II. világháború története a jaltai konferenciáig', progress: 46),
+        Chapter(id: 4, title: 'A II. világháború története III.', desc: 'A fordulattól a világháború végéig'),
+        Chapter(id: 5, title: 'Magyarország a II. világháborúban'),
         Chapter(id: 6, title: 'Az utóhatások és a béke megteremtése')
+      ],
+      events: [
+        Event(
+          id: 1,
+          title: 'Az első világháború vége',
+          date: '1918. november 11.',
+          description: 'Az első világháborút lezáró Compiègne-i fegyverszünet aláírása',
+          largeText: 'Az első világháború vége jelentős hatással volt a későbbi nemzetközi viszonyokra. A Compiègne-i erdőben aláírt fegyverszünet hivatalosan is lezárta a négy éven át tartó pusztító konfliktust. A háborút követően aláírt versailles-i békeszerződés kemény feltételeket szabott Németországnak, amelyek gazdasági nehézségeket és nemzeti megaláztatást okoztak, később ez jelentősen hozzájárult a nácik hatalomra jutásához.',
+        ),
+        Event(
+          id: 2,
+          title: 'Hitler hatalomra kerülése',
+          date: '1933. január 30.',
+          description: 'Adolf Hitler Németország kancellárává választása',
+          largeText: 'Adolf Hitler kancellári kinevezése Németországban jelentős fordulópontot jelentett. A Weimari Köztársaság politikai instabilitása és a gazdasági válság keltette elégedetlenség teremtette meg a táptalajt a radikális ideológiák, így a nácizmus térnyeréséhez. Hitler hatalomra kerülésével megindultak azok a folyamatok, amelyek Európa és a világ sorsát gyökeresen megváltoztatták.'
+
+        ),
+        Event(
+          id: 3,
+          title: 'A müncheni egyezmény',
+          date: '1938. szeptember 30.',
+          description: 'Az angol, a francia, az olasz és a német vezetők megállapodása a Szudétavidék németek lakta területeinek visszacsatolásáról Németországhoz',
+          largeText: 'A müncheni egyezmény a béke megőrzésének illúzióját keltette. Chamberlain brit miniszterelnök, Daladier francia elnök, Mussolini olasz diktátor és Hitler együtt döntöttek a Szudétavidék Németországhoz való csatolásáról, amit a németek lakta területek önrendelkezési jogával indokoltak. Ez az engedményezési politika később bizonyult tragikus hibának, mivel Hitler ezt követően további területeket szállt meg.',
+        ),
+        Event(
+          id: 4,
+          title: 'Molotov–Ribbentrop paktum',
+          date: '1939. augusztus 23.',
+          description: 'A Szovjetunió és a Harmadik Birodalom közötti megnemtámadási egyezmény',
+          largeText: 'Ez a megnemtámadási szerződés a Szovjetunió és Németország között jött létre. A paktum titkos záradéka Kelet-Európa felosztását is tartalmazta, ami lehetővé tette a két hatalom számára, hogy területeket szerezzenek meg Lengyelország és más országok rovására. Ez a megállapodás megmutatta, hogy milyen kiszámíthatatlan és opportunista volt a nemzetközi politika ebben az időszakban.',
+        ),
+        Event(
+          id: 5,
+          title: 'Lengyelország megtámadása',
+          date: '1939. szeptember 1.',
+          description: 'A német hadsereg támadása Lengyelország ellen, a második világháború kezdeteként',
+          largeText: 'Németország támadása Lengyelország ellen jelentette a második világháború kezdetét. Ez a lépés gyorsan vezetett a brit és francia hadüzenethez Németországnak, amivel formálisan megkezdődött a globális konfliktus. A villámháború (Blitzkrieg) taktikáját alkalmazva a német erők gyorsan áttörték a lengyel védelmet.',
+        ),
+        Event(
+          id: 6,
+          title: 'A Pearl Harbor-i támadás',
+          date: '1941. december 7.',
+          description: 'Japán légicsapása az amerikai flotta ellen, az Egyesült Államok bekapcsolódása a háborúba',
+          largeText: 'Japán támadása Pearl Harbor ellen az Egyesült Államokat is bevonultatta a második világháborúba. Ez az esemény drámaian megváltoztatta az Egyesült Államok addigi elszigeteltségpolitikáját, és az amerikai gazdasági és katonai erőforrások bekapcsolódása döntő jelentőségűvé vált a háború kimenetelében.',
+        ),
+        Event(
+          id: 7,
+          title: 'A normandiai partraszállás',
+          date: '1944. június 6.',
+          description: 'A szövetségesek partraszállása Franciaországban, a második világháború egyik legnagyobb hadmûvelete',
+          largeText: 'A normandiai partraszállás, vagy D-nap, a szövetséges erők egyik legnagyobb és legbonyolultabb hadművelete volt. Ennek során nyílt meg a második front Európában, ami jelentős lépés volt a náci Németország legyőzése felé. A művelet komplexitása és a katonai erőfeszítés mértéke példa nélküli volt a történelemben.',
+        ),
+        Event(
+          id: 8,
+          title: 'A berlini ostrom vége',
+          date: '1945. május 2.',
+          description: 'A szovjet csapatok elfoglalják Berlin városát, a második világháború európai szakaszának befejezése',
+          largeText: 'A berlini ostrom a háború európai színterén az egyik utolsó nagy csata volt, amelynek során a szovjet csapatok elfoglalták a német fővárost. Berlin elfoglalása jelentős pszichológiai és politikai győzelem volt, amely gyakorlatilag véget vetett a háborúnak Európában.'
+        ),
+        Event(
+          id: 9,
+          title: 'A japán kapituláció',
+          date: '1945. szeptember 2.',
+          description: 'Japán aláírja a feltétel nélküli kapitulációt, a második világháború vége',
+          largeText: 'A japán kapitulációval zárult le hivatalosan a második világháború. Az Egyesült Államok által ledobott atombombák, Hirosimára és Nagaszakira, valamint a Szovjetunió hadüzenete Japánnak, jelentős nyomást gyakoroltak a japán kormányra, hogy feladják a harcot. A kapituláció a háború egyik legtragikusabb és legvitathatóbb epizódját is jelenti.',
+        ),
       ],
     ),
 
@@ -401,11 +467,58 @@ class TopicsController extends GetxController {
         ),
       ],
       chapters: [
-        Chapter(id: 7, title: 'A Római Birodalom kialakulása és terjeszkedése'),
-        Chapter(id: 8, title: ' birodalom fénykora és gazdasági fejlődése'),
-        Chapter(id: 9, title: 'A birodalom válsága és belső problémái'),
-        Chapter(id: 10, title: 'A birodalom szétesése és a barbár inváziók'),
-        Chapter(id: 11, title: 'A Római Birodalom utóhatásai és öröksége'),
+        Chapter(id: 7, title: 'Róma', desc: 'Köztársaság hét dombon'),
+        Chapter(id: 8, title: 'Oszd meg és uralkodj!'),
+        Chapter(id: 9, title: 'Marius és Sulla. A római hadsereg', desc: 'Öszvérek és halállisták'),
+        Chapter(id: 10, title: 'Az I. triumvirátus', desc: 'Caesar, Pompeius, Crassus'),
+        Chapter(id: 11, title: 'A principatus rendszere'),
+        Chapter(id: 112, title: 'Római civilizáció és életmód. Pannonia'),
+        Chapter(id: 113, title: 'A kereszténység születése és elterjedése', desc: 'Az Ember Fia'),
+        Chapter(id: 114, title: 'A Római Birodalom bukása')
+      ],
+      events: [
+        Event(
+          id: 10,
+          title: 'A Római Köztársaság alapítása',
+          date: 'Kr. e. 509',
+          description: 'A Római Köztársaság hivatalos kezdete, amikor a rómaiak elűzték az utolsó etruszk királyt, Tarquinius Superbust, és létrehozták a köztársaságot, amely senatusra és választott tisztségviselőkre épült.',
+          largeText: 'Az első római köztársaság megalakulása egy kulcsfontosságú fordulópont volt Róma történelmében. A köztársaságot az etruszk királyság megdöntése után hozták létre, amikor a rómaiak elűzték Tarquinius Superbust, az utolsó etruszk királyt. Ez a változás radikálisan átalakította Róma politikai szerkezetét, bevezetve a senatust és a választott tisztségviselőket, mint alapvető intézményeket. A köztársaság megteremtette a hatalmi ágak szétválasztásának és a polgári szabadságjogoknak az alapjait, amelyek hozzájárultak a városállam későbbi terjeszkedéséhez és virágzásához.',
+        ),
+        Event(
+          id: 11,
+          title: 'Caesar kinevezése életre szóló diktátorrá',
+          date: 'Kr. e. 44.',
+          description: 'Julius Caesar kinevezése életre szóló diktátorrá, amely a köztársaság hanyatlásának és a birodalom kezdetének számított.',
+          largeText: 'Julius Caesar életre szóló diktátorrá válása mélyen megosztotta a római társadalmat és a köztársaság politikai rendszerének hanyatlását jelezte. Caesar ambíciói és a hatalom centralizálása, amelyet a senatus és a hagyományos köztársasági értékek ellenében ért el, a köztársaság alapelveivel szemben állt. Ezen időszak politikai és társadalmi feszültségei kulmináltak Caesar meggyilkolásában Kr. e. március 15-én, ami mély válságba sodorta Rómát, és végül a birodalmi rendszer felé terelte az államot.',
+        ),
+        Event(
+          id: 12,
+          title: 'Augustus uralkodásának kezdete',
+          date: 'Kr. e. 27.',
+          description: 'Augustus (Octavianus) kinevezése a Római Birodalom első császárjává, amely a köztársaság hivatalos végét és a principatus rendszerének kezdetét jelentette.',
+          largeText: 'Octavianus, Caesar unokaöccse és örököse, Kr. e. 27-ben Augustus császár néven lépett a történelem színpadára, ezzel hivatalosan is véget vetve a Római Köztársaságnak és elindítva a Római Birodalom principatus rendszerét. Augustus hatalomra jutása az állam átalakításával járt, amely magában foglalta a hadsereg, a pénzügyek és az igazságszolgáltatás reformját. Ezen intézkedések stabilizálták a birodalmat és lehetővé tették hosszú távú békéjét és virágzását.',
+        ),
+        Event(
+          id: 13,
+          title: 'A pax romana kezdete',
+          date: 'Kr. e. 27.',
+          description: 'Augustus uralkodásának kezdetétől számított mintegy 200 éves béke és stabilitás korszaka, amely a birodalom virágzását és kulturális fejlődését hozta.',
+          largeText: 'A pax romana, vagyis a "római béke" Augustus uralkodásának kezdetével vette kezdetét, és mintegy 200 évig tartott. Ez a korszak a Római Birodalom történetének egyik legstabilabb és legvirágzóbb időszaka volt, amely alatt jelentős építkezések, úthálózat-fejlesztések, és gazdasági fejlődés zajlott. A kultúra, művészet és tudományos élet virágzása mellett a birodalom belső stabilitása és a határok biztonsága is megteremtődött.',
+        ),
+        Event(
+          id: 14,
+          title: 'A Római Birodalom területének csúcspontja',
+          date: 'Kr. u. 117.',
+          description: 'Traianus császár uralkodásának idején a birodalom területe elérte a legnagyobb kiterjedését, amely Skóciától a Perzsa-öbölig terjedt.',
+          largeText: 'Traianus császár uralkodása alatt a Római Birodalom elérte területi kiterjedésének csúcspontját, amikor is a birodalom a mai Nagy-Britanniától a Közel-Keleten át Észak-Afrikáig és a Perzsa-öbölig terjedt. Traianus hódításai és a birodalmi infrastruktúra fejlesztései kiterjesztették Róma befolyását és gazdasági erejét, amely hosszú távon azonban fenntarthatatlanná vált és kihívásokat jelentett a birodalom számára.',
+        ),
+        Event(
+          id: 15,
+          title: 'A Nyugatrómai Birodalom bukása',
+          date: 'Kr. u. 476.',
+          description: 'A Nyugatrómai Birodalom hivatalos bukása, amelyet Odoaker germán király elfoglalása és Romulus Augustulus utolsó császár megdöntése jelentett.',
+          largeText: 'A Nyugatrómai Birodalom bukása egybeesett Odoaker germán vezér általi hatalomátvétellel, aki megdöntötte Romulus Augustulust, az utolsó nyugatrómai császárt. Ez a történelmi esemény formálisan jelölte a Nyugatrómai Birodalom végét és a középkor kezdetét Európában. A birodalom bukása számos tényező – köztük politikai gyengeség, gazdasági problémák és külső támadások – együttes eredményeként következett be, ami mély hatást gyakorolt az európai történelemre és a következő évezred kulturális dinamikájára.'
+        ),
       ],
     ),
 
@@ -414,6 +527,57 @@ class TopicsController extends GetxController {
       id: 3,
       title: '48-49-es forradalom és szabadságharc',
       imgPath: 'images/topic003.webp',
+      events: [
+        Event(
+          id: 16,
+          title: 'A pesti forradalom kitörése',
+          date: '1848. március 15.',
+          description: 'A márciusi ifjak által vezetett forradalom kitörése Pesten, melynek során a magyar reformkövetelések kinyilvánításra jutottak.',
+          largeText: 'A pesti forradalom 1848. március 15-én tört ki, amikor is a márciusi ifjak csoportja, köztük Petőfi Sándor és Jókai Mór, nyilvánosan felolvasták a 12 pontot és Petőfi a Nemzeti dalt. Ez a nap jelentette Magyarország felébredését a nemzeti öntudatra és reformkövetelések megfogalmazását, amely a polgári átalakulás és a Habsburg birodalommal szembeni függetlenségi igény kinyilvánítására irányult.',
+        ),
+        Event(
+          id: 17,
+          title: 'Az áprilisi törvények elfogadása',
+          date: '1848. április 11.',
+          description: 'A Habsburg uralkodó, I. Ferenc József szentesíti az áprilisi törvényeket, melyek Magyarország modernizálását célozzák.',
+          largeText: 'Az áprilisi törvények, melyeket 1848. április 11-én V. Ferdinand hagyott jóvá, Magyarország újkori történetének egyik alapkövei. Ezek a törvények kiterjesztették a polgári és politikai szabadságjogokat, megszüntették a jobbágyi függőséget, és bevezették a felelős kormányzatot, ezzel lényegében modern állammá alakítva Magyarországot.',
+        ),
+        Event(
+          id: 18,
+          title: 'Az első fegyveres összecsapás',
+          date: '1848. szeptember 29.',
+          description: 'A pákozdi csata, mely során a magyar csapatok megállítják a bécsi kormány által küldött osztrák sereget.',
+          largeText: 'A pákozdi csata, amely 1848. szeptember 29-én zajlott, az első jelentős fegyveres összecsapás volt az osztrák csapatok és a magyar honvédsereg között. A csata Magyarország függetlenségi törekvéseinek védelmében döntő jelentőségű volt, mivel a magyar erők sikeresen megállították a bécsi kormány által küldött sereget.',
+        ),
+        Event(
+          id: 19,
+          title: 'Kossuth Lajos kinevezése kormányzónak',
+          date: '1849. április 14.',
+          description: 'Kossuth Lajos kinevezése Magyarország kormányzójává és a függetlenség kihirdetése.',
+          largeText: 'Kossuth Lajos, a forradalom és szabadságharc karizmatikus vezéralakja, 1849. április 14-én lett Magyarország kormányzója. Ekkor hirdette ki a függetlenségi nyilatkozatot, amely kinyilvánította Magyarország teljes szuverenitását a Habsburg Birodalomtól.',
+        ),
+        Event(
+          id: 20,
+          title: 'A szabadságharc csúcspontja',
+          date: '1849. április-május',
+          description: 'A tavaszi hadjárat során a magyar seregek sorozatban aratnak győzelmeket az osztrák és az előrenyomuló orosz csapatok ellen.',
+          largeText: '1849 tavaszán a magyar honvédsereg sorozatos győzelmeket aratott az osztrák és az előrenyomuló orosz csapatok ellen. Ez az időszak, ismert mint a tavaszi hadjárat, a magyar szabadságharc csúcspontját jelentette, mely fokozta a nemzeti öntudatot és a küzdelmek hevét.',
+        ),
+        Event(
+          id: 21,
+          title: 'A világosi fegyverletétel',
+          date: '1849. augusztus 13.',
+          description: 'Görgei Artúr tábornok Világosnál leteszi a fegyvert az orosz és az osztrák csapatok előtt, ezzel véget ér a szabadságharc.',
+          largeText: 'A szabadságharc tragikus vége 1849. augusztus 13-án következett be, amikor Görgei Artúr tábornok Világosnál fegyvert adott az osztrák és orosz csapatoknak. Ez a fegyverletétel gyakorlatilag véget vetett a magyar függetlenségi harcnak és kezdetét jelentette a megtorlások időszakának.',
+        ),
+        Event(
+          id: 22,
+          title: 'Az aradi vértanúk kivégzése',
+          date: '1849. október 6.',
+          description: 'A 13 aradi vértanú kivégzése, köztük Batthyány Lajos miniszterelnöké, aki a magyar függetlenségi törekvések egyik vezéralakja volt.',
+          largeText: 'Az aradi vértanúk, köztük több magas rangú honvéd tiszt és Batthyány Lajos, az első felelős magyar kormány miniszterelnöke, kivégzése 1849. október 6-án mély és tartós sebet ejtett a magyar nemzeti tudatban. Ez a nap a magyar történelem egyik legfájdalmasabb emléke marad, mely az elnyomás és az áldozatvállalás szimbólumává vált.'
+        )
+      ],
       questions: [
         Question(
           id: 1,
@@ -973,6 +1137,50 @@ class TopicsController extends GetxController {
         Chapter(id: 24, title: 'A Háború Fronton Kívül: A Tengeri Ütközetek és A Légiharcok Kora'),
         Chapter(id: 25, title: 'A Háború Vége és a Békeszerződések'),
 
+      ],
+      events: [
+        Event(
+          id: 1,
+          title: 'A szarajevói merénylet',
+          date: '1914. június 28.',
+          description: 'Gavrilo Princip szerb nacionalista meggyilkolja Ferenc Ferdinánd osztrák-magyar trónörököst, ami kiváltó oka a világháborúnak.',
+          largeText: 'A szarajevói merénylet, ami 1914. június 28-án történt, Gavrilo Princip boszniai szerb nacionalista által elkövetett gyilkosság volt, amely Ferenc Ferdinánd osztrák-magyar trónörökös és felesége életét követelte. Ez az esemény láncreakciót indított el Európában, amely a szövetségi rendszerek aktiválódásához, és végül az első világháború kitöréséhez vezetett.'
+        ),
+        Event(
+          id: 2,
+          title: 'Az első világháború kitörése',
+          date: '1914. július 28.',
+          description: 'Az Osztrák-Magyar Monarchia hadat üzen Szerbiának, ezzel kezdetét veszi az első világháború.',
+          largeText: '1914. július 28-án az Osztrák-Magyar Monarchia formálisan hadat üzent Szerbiának, válaszul a szarajevói merényletre. Ez az esemény gyorsan szélesedett konfliktussá, mivel az európai nagyhatalmak, kötelezettségeik és szövetségeik révén, egymás után léptek be a háborúba, ami végül globális méretűvé vált.'
+        ),
+        Event(
+          id: 3,
+          title: 'A somme-i csata',
+          date: '1916. július 1. - november 18.',
+          description: 'Egyike a háború legvéresebb csatáinak, ahol az összesített áldozatszám elérte a több mint egymilliót.',
+          largeText: 'A somme-i csata, amely 1916 júliusától novemberéig tartott, az első világháború egyik legnagyobb és legvéresebb ütközete volt. Több mint egymillió katona vesztette életét ebben a kimerítő és brutális harcban, amely a nyugati fronton a brit és francia erők kísérlete volt a német vonalak áttörésére.'
+        ),
+        Event(
+          id: 4,
+          title: 'Az Egyesült Államok belépése a háborúba',
+          date: '1917. április 6.',
+          description: 'Az Egyesült Államok hadat üzen Németországnak, részben a Lusitania elsüllyesztése és a német tengeralattjáró-háború miatt.',
+          largeText: 'Az Egyesült Államok 1917. április 6-án lépett be az első világháborúba, miután Németország folytatott korlátlan tengeralattjáró-háborút, amely az amerikai polgári hajózás veszélyeztetését jelentette. Az USA belépése jelentős erőforrásokat és friss erőket hozott a szövetségesek oldalára, ami létfontosságú volt a háború kimenetelének alakításában.'
+        ),
+        Event(
+          id: 5,
+          title: 'A brest-litovszki béke',
+          date: '1918. március 3.',
+          description: 'Oroszország különbéke megkötése Németországgal, ami lehetővé teszi Németország számára, hogy koncentráljon a nyugati fronton.',
+          largeText: 'A brest-litovszki békeszerződés 1918. március 3-án jött létre Oroszország és a központi hatalmak között, ami lehetővé tette Németország számára, hogy katonai erőfeszítéseit a nyugati frontra koncentrálja. Ez a szerződés az orosz forradalmi kormány által történt, amely ki akarta vonni az országot a háborúból.'
+        ),
+        Event(
+          id: 6,
+          title: 'Az első világháború vége',
+          date: '1918. november 11.',
+          description: 'A compiègne-i fegyverszünet aláírása, amely hivatalosan véget vet az első világháborúnak.',
+          largeText: 'Az első világháború 1918. november 11-én ért véget a compiègne-i fegyverszünet aláírásával, amelyet a szövetséges erők és Németország írtak alá. Ez a nap, amelyet ma Veteránok napjaként és Fegyverszüneti napként ünnepelnek, jelentette a négy évig tartó globális konfliktus hivatalos befejezését.'
+        ),
       ],
       questions: [
         Question(

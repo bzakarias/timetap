@@ -4,7 +4,8 @@ class Topic {
     this.title,
     this.questions,
     this.chapters,
-    this.imgPath
+    this.imgPath,
+    this.events
   });
 
   final int? id;
@@ -12,15 +13,36 @@ class Topic {
   final List<Question>? questions;
   final List<Chapter>? chapters;
   final String? imgPath;
+  List<Event>? events = [];
+}
+
+class Event {
+  Event({
+    this.id,
+    this.title,
+    this.date,
+    this.description,
+    this.largeText,
+  });
+
+  final int? id;
+  final String? title;
+  final String? date;
+  final String? description;
+  final String? largeText;
 }
 
 class Chapter {
   Chapter({
     this.id,
-    this.title
+    this.title,
+    this.desc,
+    this.progress = 0
 });
   final int? id;
   final String? title;
+  final String? desc;
+  int? progress;
 }
 
 class Question {
