@@ -119,17 +119,18 @@ class TopicsView extends StatelessWidget {
                                         ),
                                       )
                                   ),
-                                  Flexible(
-                                    flex: 0,
-                                    child: Padding(
-                                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                                      child: InkWell(
+                                  GetBuilder<TopicsController>(
+                                    id: 'bookmark',
+                                    builder: (controller) => Flexible(
+                                      flex: 0,
+                                      child: Padding(
+                                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                                         child: Container(
                                             width: 35,
                                             height: 35,
                                             decoration: BoxDecoration(
                                               shape: BoxShape.circle,
-                                              color: color4,
+                                              color: controller.bookmark == true ? color2 : color4,
                                               boxShadow: [
                                                 BoxShadow(
                                                   color: color1.withOpacity(0.1),
@@ -139,12 +140,17 @@ class TopicsView extends StatelessWidget {
                                                 ),
                                               ],
                                             ),
-                                            child: const Center(
-                                              child: Icon(
-                                                LineIcons.filter,
-                                                color: color1,
-                                                size: 25,
+                                            child: InkWell(
+                                              child: Center(
+                                                child: Icon(
+                                                  controller.bookmark == true ? Icons.bookmark : Icons.bookmark_border,
+                                                  color: controller.bookmark == true ? color4 : color1,
+                                                  size: 20,
+                                                ),
                                               ),
+                                              onTap: (){
+                                                controller.setBookmark();
+                                              },
                                             )
                                         ),
                                       ),
@@ -261,11 +267,11 @@ class TopicsView extends StatelessWidget {
                             ),
 
                             // TIMELINE
-                            const Padding(
-                              padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                               child: Row(
                                 children: [
-                                  Expanded(
+                                  const Expanded(
                                       child: Text(
                                         'Idővonal',
                                         style: TextStyle(
@@ -274,7 +280,19 @@ class TopicsView extends StatelessWidget {
                                           fontFamily: 'LatoBold',
                                         ),
                                       )
-                                  )
+                                  ),
+                                  const SizedBox(width: 5),
+                                  Flexible(
+                                    flex: 0,
+                                    child: Text(
+                                      'Koppints az eseményre a részletekhez',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        color: color3.withOpacity(.5),
+                                        fontFamily: 'RobotoRegular',
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),

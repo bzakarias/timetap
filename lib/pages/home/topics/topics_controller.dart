@@ -854,6 +854,50 @@ class TopicsController extends GetxController {
       id: 1,
       title: 'Ipari forradalom',
       imgPath: 'images/topic004.webp',
+      events: [
+        Event(
+            id: 1,
+            title: 'A gőzgép feltalálása',
+            date: '1712',
+            description: 'Thomas Newcomen megalkotta az első használható gőzgépet, amelyet főként a bányákban használtak vízszivattyúzáshoz.',
+            largeText: 'Thomas Newcomen 1712-ben készítette el az első működőképes gőzgépet, amely forradalmasította a víz eltávolítását a bányák mélyéről. Ez az innováció elősegítette az ipari forradalom kibontakozását, mivel lehetővé tette a mélyebb bányák kiaknázását, növelve ezzel a szénbányászat hatékonyságát.'
+        ),
+        Event(
+            id: 2,
+            title: 'A mechanikus szövőszék feltalálása',
+            date: '1784',
+            description: 'Edmund Cartwright tervezte meg az első mechanikus szövőszéket, amely jelentősen növelte a textilgyártás hatékonyságát.',
+            largeText: '1784-ben Edmund Cartwright feltalálta a mechanikus szövőszéket, amely forradalmasította a textilipart, mivel lehetővé tette a szövetgyártás automatizálását és a termelési kapacitás drasztikus növekedését. Ez az innováció alapvetően megváltoztatta a textilipari munkaerőpiacot és a gyártási folyamatokat.'
+        ),
+        Event(
+            id: 3,
+            title: 'A gőzhajó megalkotása',
+            date: '1807',
+            description: 'Robert Fulton bemutatta az első sikeres kereskedelmi gőzhajót, a Clermontot, amely jelentős hatással volt a vízi szállításra.',
+            largeText: '1807-ben Robert Fulton indította útjára a Clermontot, az első sikeresen működő kereskedelmi gőzhajót. Ez az innováció jelentős mértékben javította a vízi közlekedést és a kereskedelmi áruszállítást, megnyitva az utat a gyorsabb és hatékonyabb bel- és tengeri szállítási útvonalak felé.'
+        ),
+        Event(
+            id: 4,
+            title: 'A gőzmozdony megjelenése',
+            date: '1814',
+            description: 'George Stephenson megépítette az első működőképes gőzmozdonyt, amely forradalmasította a vasúti közlekedést.',
+            largeText: 'George Stephenson 1814-ben alkotta meg az első sikeres gőzmozdonyt, amely a vasúti közlekedés fejlődését indította el. Ez a technológia gyorsan elterjedt, és alapvetően megváltoztatta az emberek és áruk földrajzi mozgását, elősegítve a további ipari és gazdasági fejlődést.'
+        ),
+        Event(
+            id: 5,
+            title: 'Az első ipari kiállítás',
+            date: '1851',
+            description: 'Az 1851-es Nagy Kiállítás Londonban, ahol bemutatták az ipari forradalom technológiai vívmányait.',
+            largeText: '1851-ben Londonban megrendezték az első világszintű ipari kiállítást, amelyet Nagy Kiállításnak neveztek. Ez a rendezvény egyedülálló lehetőséget biztosított a világ országai számára, hogy bemutassák ipari innovációikat és előmozdítsák a nemzetközi kereskedelmet és együttműködést.'
+        ),
+        Event(
+            id: 6,
+            title: 'A telegráf megalkotása',
+            date: '1837',
+            description: 'Samuel Morse feltalálta a Morse-kódot és a telegráfot, amely forradalmasította a távközlést.',
+            largeText: 'Samuel Morse 1837-ben bemutatta a telegráfot és a hozzá tartozó Morse-kódot, amely lehetővé tette az azonnali távolsági kommunikációt. Ez a fejlesztés drasztikusan lerövidítette az információátviteli időt, és jelentős hatást gyakorolt a kereskedelemre, hírközlésre és a kormányzati ügyekre.'
+        ),
+      ],
       chapters: [
         Chapter(id: 16, title: 'Az ipari forradalom kezdete és elterjedése'),
         Chapter(id: 17, title: 'Az ipari forradalom hatása a társadalomra'),
@@ -1447,4 +1491,11 @@ class TopicsController extends GetxController {
       ],
     )
   ];
+
+  bool bookmark = false;
+
+  void setBookmark() {
+    bookmark = !bookmark;
+    update(['bookmark']);
+  }
 }

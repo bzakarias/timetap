@@ -1,4 +1,5 @@
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
+import 'package:timetap/models/quiz.dart';
 import 'package:timetap/models/video.dart';
 
 class VideoFeedController extends GetxController {
@@ -48,6 +49,24 @@ class VideoFeedController extends GetxController {
       comments: 325,
       path: 'videos/video_05.mp4',
     ),
+  ];
+
+  final List<Comment> comments = [
+    Comment(
+      id: 1,
+      comment: "Valóban lenyűgöző látni, hogy a technológia milyen gyorsan fejlődött az ipari forradalom óta! 😲 Tudtátok, hogy az első gőzmozdonyok milyen lassan haladtak a mai vonatokhoz képest?",
+      user: 'steamengine2005'
+    ),
+    Comment(
+      id: 2,
+      comment: "Ez a videó nagyon érdekes volt! 😊 Nagyon tetszett, ahogy bemutattad a különböző korszakokat és azokat a technológiákat, amelyeket használtak.",
+      user: 'historybuff123'
+    ),
+    Comment(
+      id: 3,
+      comment: 'valid amugy, nemetek nagyot mentek',
+      user: 'thereal_tomi',
+    )
   ];
 
   void like(Video video){

@@ -169,26 +169,226 @@ class StartPageWidget extends StatelessWidget {
                             left: 75,
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-                              child: Container(
-                                width: 100,
-                                decoration: BoxDecoration(
-                                  color: color1,
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: const Padding(
-                                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                                    child: Center(
-                                      child: Text(
-                                        'Elolvasom',
-                                        style: TextStyle(
-                                          color: color4,
-                                          fontSize: 14,
-                                          fontFamily: 'LatoBold',
+                              child: InkWell(
+                                child: Container(
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                    color: color1,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: const Padding(
+                                      padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                      child: Center(
+                                        child: Text(
+                                          'Elolvasom',
+                                          style: TextStyle(
+                                            color: color4,
+                                            fontSize: 14,
+                                            fontFamily: 'LatoBold',
+                                          ),
                                         ),
-                                      ),
-                                    )
+                                      )
+                                  ),
                                 ),
-                              ),
+                                onTap: (){
+                                  Get.dialog(
+                                    Dialog.fullscreen(
+                                      child: SingleChildScrollView(
+                                        child: Column(
+                                          children: [
+                                            // image
+                                            Stack(
+                                              children: [
+                                                SizedBox(
+                                                  height: 300,
+                                                  width: Get.width,
+                                                  child: Image.asset(
+                                                    'images/event001.webp',
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsets.fromLTRB(0, 10, 10, 0),
+                                                  child: Row(
+                                                    mainAxisAlignment: MainAxisAlignment.end,
+                                                    children: [
+                                                      InkWell(
+                                                        child: Container(
+                                                          width: 40,
+                                                          height: 40,
+                                                          padding: const EdgeInsets.all(5),
+                                                          decoration: BoxDecoration(
+                                                            color: Colors.black.withOpacity(.5),
+                                                            borderRadius: BorderRadius.circular(20),
+                                                          ),
+                                                          child: Icon(
+                                                            Icons.close,
+                                                            color: Colors.white.withOpacity(.9),
+                                                            size: 20,
+                                                          ),
+                                                        ),
+                                                        onTap: (){
+                                                          // resetAll();
+                                                          Get.back();
+                                                        },
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+
+                                              ],
+                                            ),
+
+                                            // date
+                                            Padding(
+                                              padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                                              child: Row(
+                                                children: [
+                                                  Flexible(
+                                                    flex: 0,
+                                                    child: Padding(
+                                                      padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                                                      child: Icon(
+                                                        LineIcons.calendar,
+                                                        color: color3.withOpacity(.5),
+                                                        size: 20,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Expanded(
+                                                    child: Text(
+                                                      '1861. április 12.',
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                        color: color3.withOpacity(.5),
+                                                        fontSize: 14,
+                                                        fontFamily: 'RobotoRegular',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+
+                                            // title
+                                            const Padding(
+                                              padding: EdgeInsets.fromLTRB(20, 0, 20, 20),
+                                              child: Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: Text(
+                                                      'Kitört az amerikai polgárháború',
+                                                      textAlign: TextAlign.center,
+                                                      style: TextStyle(
+                                                        color: color1,
+                                                        fontSize: 26,
+                                                        fontFamily: 'LatoBold',
+                                                        fontWeight: FontWeight.w900,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+
+                                            // description
+                                            const Padding(
+                                              padding: EdgeInsets.fromLTRB(20, 0, 20, 20),
+                                              child: Text(
+                                                'Az amerikai polgárháború kitörése 1861. április 12-én egy mélyen megosztott nemzet drámai eseményeként vonult be az Egyesült Államok történelmébe. Ezen a napon kezdődtek el a tüzelések Fort Sumternél, Dél-Karolinában, amelyek formálisan is elindították a polgárháborút az északi államok (Unió) és a déli államok (Konföderáció) között. Ez a konfliktus nem csak egy militáris összecsapás volt, hanem egy mély társadalmi, gazdasági és politikai válság megnyilvánulása, amely évtizedek óta feszültséget szült az országban.',
+                                                textAlign: TextAlign.justify,
+                                                style: TextStyle(
+                                                  color: color3,
+                                                  fontSize: 18,
+                                                  fontFamily: 'LatoBold',
+                                                  fontWeight: FontWeight.w900,
+                                                ),
+                                              ),
+                                            ),
+
+
+                                            const Padding(
+                                              padding: EdgeInsets.fromLTRB(10, 0, 10, 20),
+                                              child: Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: Text(
+                                                      'Az Amerikai Polgárháború Előzményei',
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                        color: color1,
+                                                        fontSize: 20,
+                                                        fontFamily: 'LatoBold',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            const Padding(
+                                              padding: EdgeInsets.fromLTRB(10, 0, 20, 10),
+                                              child: Text(
+                                                'A polgárháború előzményei az Egyesült Államok Alkotmányának 1787-es elfogadásáig nyúlnak vissza, amikor is a rabszolgaság kérdése komoly viták tárgyát képezte. A 19. század folyamán a rabszolgaság intézménye egyre inkább megosztotta az országot; a gazdaságilag gyorsan fejlődő Észak ellenezte, míg a mezőgazdasági Dél támogatta azt. Az 1850-es években a "Rabszolgatartó államok" és a "Szabad államok" közötti egyensúly fenntartása érdekében több kompromisszum született, de ezek csak ideiglenesen csillapították a feszültségeket.',
+                                                textAlign: TextAlign.justify,
+                                                style: TextStyle(
+                                                  color: color3,
+                                                  fontSize: 14,
+                                                  fontFamily: 'RobotRegular',
+                                                ),
+                                              ),
+                                            ),
+
+                                            const Padding(
+                                              padding: EdgeInsets.fromLTRB(10, 0, 10, 20),
+                                              child: Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: Text(
+                                                      'Fort Sumter és a polgárháború kitörése',
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                        color: color1,
+                                                        fontSize: 20,
+                                                        fontFamily: 'LatoBold',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            const Padding(
+                                              padding: EdgeInsets.fromLTRB(10, 0, 20, 10),
+                                              child: Text(
+                                                '1860 novemberében Abraham Lincoln megválasztása az Egyesült Államok elnökévé kiváltó okként szolgált a déli államok számára, hogy elkezdjék kilépésüket az Unióból, mivel Lincoln ellenzője volt a rabszolgaság terjeszkedésének. Dél-Karolina volt az első, amely 1860 decemberében kilépett, és hamarosan további déli államok követték példáját, létrehozva a Konföderációs Államok Amerikáját.',
+                                                textAlign: TextAlign.justify,
+                                                style: TextStyle(
+                                                  color: color3,
+                                                  fontSize: 14,
+                                                  fontFamily: 'RobotRegular',
+                                                ),
+                                              ),
+                                            ),
+                                            const Padding(
+                                              padding: EdgeInsets.fromLTRB(10, 0, 20, 10),
+                                              child: Text(
+                                                '1861. április 12-én a konföderációs erők tüzet nyitottak a Charleston kikötőjében lévő, még mindig az Unió által ellenőrzött Fort Sumter erődre. A 34 órán át tartó bombázás után az erődöt őrző Unió katonái megadták magukat. Ez az esemény váltotta ki a háború kitörését, és egy olyan fegyveres konfliktus kezdetét jelentette, amely végül négy évig tartott és az amerikai történelem legvéresebb összecsapásává vált.',
+                                                textAlign: TextAlign.justify,
+                                                style: TextStyle(
+                                                  color: color3,
+                                                  fontSize: 14,
+                                                  fontFamily: 'RobotRegular',
+                                                ),
+                                              ),
+                                            ),
+
+                                            const SizedBox(height: 50),
+                                          ],
+                                        )
+                                      ),
+                                    ),
+                                  );
+                                },
+                              )
                             ),
                           ),
                         ],

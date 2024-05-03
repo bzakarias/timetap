@@ -91,25 +91,88 @@ class VideoFeedWidget extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 20),
-                      Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          getShadowedIcon(
-                              iconData: LineIcons.comment
-                          ),
-                          Text(
-                            '${currentVideo.comments}',
-                            style: TextStyle(
-                              color: color4,
-                              fontSize: 10,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: 'OpenSansSemiBold',
-                              shadows: [
-                                shadow,
-                              ],
+                      InkWell(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            getShadowedIcon(
+                                iconData: LineIcons.comment
                             ),
-                          ),
-                        ],
+                            Text(
+                              '${currentVideo.comments}',
+                              style: TextStyle(
+                                color: color4,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: 'OpenSansSemiBold',
+                                shadows: [
+                                  shadow,
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        onTap: (){
+                          Get.bottomSheet(
+                            Container(
+                              decoration: const BoxDecoration(
+                                color: color4,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(20),
+                                  topRight: Radius.circular(20),
+                                ),
+                              ),
+                              child: Column(
+                                children: [
+                                  const SizedBox(height: 20),
+                                  const Text(
+                                    'Kommentek',
+                                    style: TextStyle(
+                                      color: color1,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w900,
+                                      fontFamily: 'LatoBold',
+                                    ),
+                                  ),
+                                  const SizedBox(height: 20),
+                                  Expanded(
+                                    child: ListView.builder(
+                                      itemCount: controller.comments.length,
+                                      itemBuilder: (context, index){
+                                        return ListTile(
+                                          trailing: CircleAvatar(
+                                            child: ClipOval(
+                                              child: Image.asset(
+                                                'images/avatar0${index+1}.webp',
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                          ),
+                                          title: Text(
+                                            controller.comments[index].user!,
+                                            style: const TextStyle(
+                                              color: color1,
+                                              fontSize: 16,
+                                              fontFamily: 'LatoBold',
+                                            ),
+                                          ),
+                                          subtitle: Text(
+                                            controller.comments[index].comment!,
+                                            style: const TextStyle(
+                                              color: color3,
+                                              fontSize: 12,
+                                              fontFamily: 'RobotoRegular',
+                                            ),
+                                          )
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
                       ),
                       const SizedBox(height: 20),
                       getShadowedIcon(

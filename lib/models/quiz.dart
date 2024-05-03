@@ -68,3 +68,20 @@ class Answer {
   final String? answerText;
   final bool? correct;
 }
+
+class CommentSection {
+  CommentSection({
+    this.id,
+    this.comments,
+  });
+  final int? id;
+  final List<Comment>? comments;
+}
+
+class Comment {
+  Comment({this.id, this.user, this.comment});
+
+  final int? id;
+  final String? user;
+  final String? comment;
+}

@@ -251,11 +251,66 @@ class HomeView extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: const Center(
-                    child: Icon(
-                      LineIcons.filter,
-                      color: color1,
-                      size: 25,
+                  child:  Center(
+                    child: PopupMenuButton(
+                      icon: const Icon(
+                        LineIcons.filter,
+                        color: color1,
+                        size: 25,
+                      ),
+                      constraints: BoxConstraints(
+                        maxWidth: Get.width * .75,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius:BorderRadius.circular(15),
+                      ),
+                      color: Colors.white.withOpacity(.85),
+                      itemBuilder: (context) => [
+                        const PopupMenuItem(
+                          child: Text(
+                            'Ókor',
+                            style: TextStyle(
+                              color: color1,
+                              fontSize: 14,
+                              fontFamily: 'RobotoRegular',
+                            ),
+                          ),
+
+                        ),
+                        const PopupMenuItem(
+                          child: Text(
+                            'Középkor',
+                            style: TextStyle(
+                              color: color1,
+                              fontSize: 14,
+                              fontFamily: 'RobotoRegular',
+                            ),
+                          ),
+
+                        ),
+                        const PopupMenuItem(
+                          child: Text(
+                            'Újkor',
+                            style: TextStyle(
+                              color: color1,
+                              fontSize: 14,
+                              fontFamily: 'RobotoRegular',
+                            ),
+                          ),
+
+                        ),
+                        const PopupMenuItem(
+                          child: Text(
+                            'Jelenkor',
+                            style: TextStyle(
+                              color: color1,
+                              fontSize: 14,
+                              fontFamily: 'RobotoRegular',
+                            ),
+                          ),
+
+                        ),
+                      ],
                     ),
                   )
               ),
