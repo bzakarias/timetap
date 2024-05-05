@@ -28,7 +28,7 @@ class StartPageWidget extends StatelessWidget {
                             style: TextStyle(
                               color: color3.withOpacity(0.5),
                               fontSize: 20,
-                              fontFamily: 'LatoBold',
+                              fontFamily: 'SedanSC',
                             ),
                           )
                       ),
@@ -47,7 +47,7 @@ class StartPageWidget extends StatelessWidget {
                             style: TextStyle(
                               color: color1,
                               fontSize: 32,
-                              fontFamily: 'LatoBold',
+                              fontFamily: 'SedanSC',
                             ),
                           )
                       ),
@@ -109,7 +109,7 @@ class StartPageWidget extends StatelessWidget {
                                           style: TextStyle(
                                             color: color3.withOpacity(.5),
                                             fontSize: 14,
-                                            fontFamily: 'LatoBold',
+                                            fontFamily: 'SedanSC',
                                           ),
                                         ),
                                         const TextSpan(
@@ -117,7 +117,7 @@ class StartPageWidget extends StatelessWidget {
                                           style: TextStyle(
                                             color: color1,
                                             fontSize: 20,
-                                            fontFamily: 'LatoBold',
+                                            fontFamily: 'SedanSC',
                                           ),
                                         ),
                                       ],
@@ -184,7 +184,7 @@ class StartPageWidget extends StatelessWidget {
                                           style: TextStyle(
                                             color: color4,
                                             fontSize: 14,
-                                            fontFamily: 'LatoBold',
+                                            fontFamily: 'SedanSC',
                                           ),
                                         ),
                                       )
@@ -282,7 +282,7 @@ class StartPageWidget extends StatelessWidget {
                                                       style: TextStyle(
                                                         color: color1,
                                                         fontSize: 26,
-                                                        fontFamily: 'LatoBold',
+                                                        fontFamily: 'SedanSC',
                                                         fontWeight: FontWeight.w900,
                                                       ),
                                                     ),
@@ -300,7 +300,7 @@ class StartPageWidget extends StatelessWidget {
                                                 style: TextStyle(
                                                   color: color3,
                                                   fontSize: 18,
-                                                  fontFamily: 'LatoBold',
+                                                  fontFamily: 'SedanSC',
                                                   fontWeight: FontWeight.w900,
                                                 ),
                                               ),
@@ -318,7 +318,7 @@ class StartPageWidget extends StatelessWidget {
                                                       style: TextStyle(
                                                         color: color1,
                                                         fontSize: 20,
-                                                        fontFamily: 'LatoBold',
+                                                        fontFamily: 'SedanSC',
                                                       ),
                                                     ),
                                                   ),
@@ -349,7 +349,7 @@ class StartPageWidget extends StatelessWidget {
                                                       style: TextStyle(
                                                         color: color1,
                                                         fontSize: 20,
-                                                        fontFamily: 'LatoBold',
+                                                        fontFamily: 'SedanSC',
                                                       ),
                                                     ),
                                                   ),
@@ -406,7 +406,7 @@ class StartPageWidget extends StatelessWidget {
                             style: TextStyle(
                               color: color1,
                               fontSize: 32,
-                              fontFamily: 'LatoBold',
+                              fontFamily: 'SedanSC',
                             ),
                           )
                       ),
@@ -474,7 +474,7 @@ class StartPageWidget extends StatelessWidget {
                                     style: const TextStyle(
                                       color: color1,
                                       fontSize: 20,
-                                      fontFamily: 'LatoBold',
+                                      fontFamily: 'SedanSC',
                                     ),
                                     overflow: TextOverflow.ellipsis,
                                   ),
@@ -504,7 +504,7 @@ class StartPageWidget extends StatelessWidget {
                               style: TextStyle(
                                 color: color3.withOpacity(0.5),
                                 fontSize: 12,
-                                fontFamily: 'LatoBold',
+                                fontFamily: 'SedanSC',
                               ),
                             ),
                           ),
@@ -519,7 +519,7 @@ class StartPageWidget extends StatelessWidget {
                                   style: TextStyle(
                                     color: color3.withOpacity(0.5),
                                     fontSize: 14,
-                                    fontFamily: 'LatoBold',
+                                    fontFamily: 'SedanSC',
                                   ),
                                 ),
                                 const Icon(
@@ -549,7 +549,7 @@ class StartPageWidget extends StatelessWidget {
                                   style: TextStyle(
                                     color: color1,
                                     fontSize: 24,
-                                    fontFamily: 'LatoBold',
+                                    fontFamily: 'SedanSC',
                                   ),
                                 )
                             ),
@@ -716,7 +716,7 @@ class StartPageWidget extends StatelessWidget {
                                                     textAlign: TextAlign.center,
                                                     style: TextStyle(
                                                       color: color4,
-                                                      fontFamily: 'LatoBold',
+                                                      fontFamily: 'SedanSC',
                                                       fontSize: 20,
                                                       fontWeight: FontWeight.w900,
                                                     ),
@@ -775,7 +775,7 @@ class StartPageWidget extends StatelessWidget {
                                                       textAlign: TextAlign.center,
                                                       style: TextStyle(
                                                         color: color1,
-                                                        fontFamily: 'LatoBold',
+                                                        fontFamily: 'SedanSC',
                                                         fontSize: 16,
                                                       ),
                                                     ),
@@ -887,7 +887,7 @@ class StartPageWidget extends StatelessWidget {
                                                     textAlign: TextAlign.center,
                                                     style: TextStyle(
                                                       color: color4,
-                                                      fontFamily: 'LatoBold',
+                                                      fontFamily: 'SedanSC',
                                                       fontSize: 20,
                                                       fontWeight: FontWeight.w900,
                                                     ),
@@ -946,7 +946,7 @@ class StartPageWidget extends StatelessWidget {
                                                       textAlign: TextAlign.center,
                                                       style: TextStyle(
                                                         color: color2,
-                                                        fontFamily: 'LatoBold',
+                                                        fontFamily: 'SedanSC',
                                                         fontSize: 16,
                                                       ),
                                                     ),

@@ -50,7 +50,7 @@ class VideoFeedWidget extends StatelessWidget {
                     color: color4,
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
-                    fontFamily: 'LatoBold',
+                    fontFamily: 'SedanSC',
                     shadows: [
                       shadow,
                     ],
@@ -131,7 +131,7 @@ class VideoFeedWidget extends StatelessWidget {
                                       color: color1,
                                       fontSize: 20,
                                       fontWeight: FontWeight.w900,
-                                      fontFamily: 'LatoBold',
+                                      fontFamily: 'SedanSC',
                                     ),
                                   ),
                                   const SizedBox(height: 20),
@@ -153,7 +153,7 @@ class VideoFeedWidget extends StatelessWidget {
                                             style: const TextStyle(
                                               color: color1,
                                               fontSize: 16,
-                                              fontFamily: 'LatoBold',
+                                              fontFamily: 'SedanSC',
                                             ),
                                           ),
                                           subtitle: Text(
@@ -196,7 +196,7 @@ class VideoFeedWidget extends StatelessWidget {
                         color: color4,
                         fontSize: 16,
                         fontWeight: FontWeight.w900,
-                        fontFamily: 'LatoBold',
+                        fontFamily: 'SedanSC',
                         shadows: [
                           shadow
                         ],

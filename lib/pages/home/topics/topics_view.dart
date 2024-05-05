@@ -72,7 +72,7 @@ class TopicsView extends StatelessWidget {
                                   overflow: TextOverflow.ellipsis,
                                   style: const TextStyle(
                                     color: Colors.black87,
-                                    fontFamily: 'LatoBold',
+                                    fontFamily: 'SedanSC',
                                     fontSize: 20,
                                     fontWeight: FontWeight.w900,
                                   ),
@@ -115,7 +115,7 @@ class TopicsView extends StatelessWidget {
                                         style: const TextStyle(
                                           color: color1,
                                           fontSize: 24,
-                                          fontFamily: 'LatoBold',
+                                          fontFamily: 'SedanSC',
                                         ),
                                       )
                                   ),
@@ -188,7 +188,7 @@ class TopicsView extends StatelessWidget {
                                   style: TextStyle(
                                     color: color1,
                                     fontSize: 24,
-                                    fontFamily: 'LatoBold',
+                                    fontFamily: 'SedanSC',
                                   ),
                               )
                                   )
@@ -220,7 +220,7 @@ class TopicsView extends StatelessWidget {
                                           style: const TextStyle(
                                             color: color1,
                                             fontSize: 18,
-                                            fontFamily: 'LatoBold',
+                                            fontFamily: 'SedanSC',
                                           ),
                                         ),
                                         subtitle: chapter.desc != null ? Text(
@@ -277,7 +277,7 @@ class TopicsView extends StatelessWidget {
                                         style: TextStyle(
                                           color: color1,
                                           fontSize: 24,
-                                          fontFamily: 'LatoBold',
+                                          fontFamily: 'SedanSC',
                                         ),
                                       )
                                   ),
@@ -347,7 +347,7 @@ class TopicsView extends StatelessWidget {
                                                                     style: const TextStyle(
                                                                       color: color1,
                                                                       fontSize: 22,
-                                                                      fontFamily: 'LatoBold',
+                                                                      fontFamily: 'SedanSC',
                                                                       fontWeight: FontWeight.bold,
                                                                     ),
                                                                   ),
@@ -368,7 +368,7 @@ class TopicsView extends StatelessWidget {
                                                                     style: TextStyle(
                                                                       color: color1.withOpacity(.5),
                                                                       fontSize: 16,
-                                                                      fontFamily: 'LatoBold',
+                                                                      fontFamily: 'SedanSC',
                                                                     ),
                                                                   ),
                                                                 ),
@@ -399,7 +399,7 @@ class TopicsView extends StatelessWidget {
                                                                     style: const TextStyle(
                                                                       color: color2,
                                                                       fontSize: 16,
-                                                                      fontFamily: 'LatoBold',
+                                                                      fontFamily: 'SedanSC',
                                                                     ),
                                                                   ),
                                                                 ),
@@ -444,7 +444,7 @@ class TopicsView extends StatelessWidget {
                                                 style: const TextStyle(
                                                   color: color3,
                                                   fontSize: 16,
-                                                  fontFamily: 'LatoBold',
+                                                  fontFamily: 'SedanSC',
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
@@ -454,7 +454,7 @@ class TopicsView extends StatelessWidget {
                                                 style: const TextStyle(
                                                   color: color2,
                                                   fontSize: 18,
-                                                  fontFamily: 'LatoBold',
+                                                  fontFamily: 'SedanSC',
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
@@ -482,7 +482,6 @@ class TopicsView extends StatelessWidget {
                   );
                 },
               );
-              return QuizWidget(topic: topic);
             }
         );
       },

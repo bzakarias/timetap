@@ -105,7 +105,7 @@ class QuizGameWidget extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
                       child: Text(
-                        'A második világháború',
+                        topic.title ?? '',
                         style: TextStyle(
                           color: color3.withOpacity(.5),
                           fontFamily: 'Roboto Regular',
@@ -125,7 +125,7 @@ class QuizGameWidget extends StatelessWidget {
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 color: color3,
-                                fontFamily: 'LatoBold',
+                                fontFamily: 'SedanSC',
                                 fontSize: 24,
                                 fontWeight: FontWeight.w900,
                               ),
@@ -180,7 +180,7 @@ class QuizGameWidget extends StatelessWidget {
                                         'Következő',
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontFamily: 'LatoBold',
+                                          fontFamily: 'SedanSC',
                                           fontSize: 18,
                                           fontWeight: FontWeight.w900,
                                         ),
@@ -214,7 +214,7 @@ class QuizGameWidget extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: const TextStyle(
                               color: color4,
-                              fontFamily: 'LatoBold',
+                              fontFamily: 'SedanSC',
                               fontSize: 24,
                               fontWeight: FontWeight.w900,
                             ),
@@ -241,7 +241,7 @@ class QuizGameWidget extends StatelessWidget {
                                     'Bezárás',
                                     style: TextStyle(
                                       color: color4,
-                                      fontFamily: 'LatoBold',
+                                      fontFamily: 'SedanSC',
                                       fontSize: 18,
                                       fontWeight: FontWeight.w900,
                                     ),

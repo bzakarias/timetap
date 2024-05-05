@@ -66,9 +66,9 @@ flutter_icons:
 flutter:
 
   fonts:
-    - family: LatoBold
+    - family: SedanSC
       fonts:
-        - asset: fonts/Lato-Bold.ttf
+        - asset: fonts/Freeman-Regular.ttf
 
     - family: RobotoRegular
       fonts:

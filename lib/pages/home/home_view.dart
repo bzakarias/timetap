@@ -229,7 +229,7 @@ class HomeView extends StatelessWidget {
           style: TextStyle(
             color: color1,
             fontSize: 26,
-            fontFamily: 'LatoBold',
+            fontFamily: 'SedanSC',
           ),
         ),
         actions: [

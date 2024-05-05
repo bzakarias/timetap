@@ -185,7 +185,7 @@ class TestGraduationView extends StatelessWidget {
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 24,
-                                        fontFamily: 'LatoBold',
+                                        fontFamily: 'SedanSC',
                                       )
                                   ),
                                 ),

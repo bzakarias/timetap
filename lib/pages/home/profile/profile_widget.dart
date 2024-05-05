@@ -97,7 +97,7 @@ class ProfileWidget extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 24,
                           color: color1,
-                          fontFamily: 'LatoBold',
+                          fontFamily: 'SedanSC',
                         ),
                       ),
                       Padding(
@@ -273,7 +273,7 @@ class ProfileWidget extends StatelessWidget {
                       style: TextStyle(
                         color: color3.withOpacity(0.5),
                         fontSize: 20,
-                        fontFamily: 'LatoBold',
+                        fontFamily: 'SedanSC',
                       ),
                     )
                 ),
@@ -327,7 +327,7 @@ class ProfileWidget extends StatelessWidget {
                               overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 color: Colors.black87,
-                                fontFamily: 'LatoBold',
+                                fontFamily: 'SedanSC',
                                 fontSize: 20,
                                 fontWeight: FontWeight.w900,
                               ),
@@ -390,7 +390,7 @@ class ProfileWidget extends StatelessWidget {
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
                                                 color: color4,
-                                                fontFamily: 'LatoBold',
+                                                fontFamily: 'SedanSC',
                                                 fontSize: 20,
                                                 fontWeight: FontWeight.w900,
                                               ),
@@ -449,7 +449,7 @@ class ProfileWidget extends StatelessWidget {
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
                                                 color: color2,
-                                                fontFamily: 'LatoBold',
+                                                fontFamily: 'SedanSC',
                                                 fontSize: 16,
                                               ),
                                             ),
